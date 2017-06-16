@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SidebarHome> renders correctly 1`] = `
+<div>
+  <section
+    className="intro"
+  >
+    <h2
+      style={
+        Object {
+          "fontSize": "1.8em",
+        }
+      }
+    >
+      Capeia is a new way to interact with science.
+    </h2>
+    <ul
+      className="sellingPoints"
+    >
+      <li
+        className={undefined}
+      >
+        <span>
+          <i>
+            Discover
+          </i>
+           new developments in cutting-edge sciences.
+        </span>
+      </li>
+      <li
+        className={undefined}
+      >
+        <span>
+          <i>
+            Get in touch
+          </i>
+           with people involved in the field.
+        </span>
+      </li>
+      <li
+        className={undefined}
+      >
+        <span>
+          <i>
+            Support
+          </i>
+           research that is meaningful to you.
+        </span>
+      </li>
+    </ul>
+    <p>
+      <a
+        className="btn btn-capeia btn-lg highlight"
+        href="/welcome"
+      >
+        Take the Tour
+      </a>
+    </p>
+  </section>
+  <section>
+    <div>
+      &lt;DeferredDataProvider&gt;
+        &lt;Relay(AotmBox) /&gt;
+      &lt;/DeferredDataProvider&gt;
+    </div>
+  </section>
+</div>
+`;

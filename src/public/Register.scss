@@ -1,0 +1,49 @@
+@import '~theme/variables';
+
+.registrationForm {
+  // TODO: Same rules as used by .articlePreview => Move into a layout component?
+  max-width: 720px;
+  margin: 0 auto;
+
+  h1:first-child {
+    margin-top: 0;
+  }
+}
+
+.agreementBox {
+  display: block;
+  padding: 1em 0;
+
+  :global(.checkbox) {
+    display: inline-block;
+  }
+
+  label {
+    font-size: 1em;
+    color: $text-dark;
+    text-transform: none;
+  }
+
+  button {
+    float: right;
+    vertical-align: baseline;
+  }
+}
+
+.sidebar {
+  ol li {
+    margin: 1em 0;
+  }
+}
+
+.successMessage {
+  padding: 1em;
+  border-left: solid 12px $brand-success;
+}
+
+.globalErrorNotice {
+  padding: 0.5em;
+  color: red;
+  text-align: center;
+  border: solid 2px red;
+}

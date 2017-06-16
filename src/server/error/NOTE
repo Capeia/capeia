@@ -1,0 +1,3 @@
+By now (Node 8) we should be able to use "class CustomError extends Error".
+However, we need to dial back on Babel transforms first, as they somehow screw
+this up (i.e. instanceof checks break).

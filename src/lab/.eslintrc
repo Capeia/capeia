@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "local-rules/submodule-imports": 0
+  }
+}

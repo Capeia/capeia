@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextContainer> renders correctly 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="contentContainer  col-lg-6 col-lg-offset-3 col-md-8"
+    >
+      <div
+        className={undefined}
+      />
+    </div>
+    <div
+      className="sidebarContainer col-lg-3 col-md-4"
+    >
+      <aside
+        className="sidebar"
+      />
+    </div>
+  </div>
+</div>
+`;

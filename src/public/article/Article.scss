@@ -1,0 +1,76 @@
+@import '~theme/variables';
+@import '~theme/typography';
+@import '~theme/shared/rich-text';
+
+.scoreBadge {
+  @include sans-serif-bold;
+  display: inline-block;
+  padding: .2em .6em;
+  font-size: .8em;
+  color: $text-light;
+  background: $primary-red;
+  border-radius: 999em;
+}
+
+.editorial {
+  @media print {
+    margin-bottom: 0;
+  }
+}
+
+.authorInfo {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+  }
+
+  @media print {
+    justify-content: flex-start;
+  }
+}
+
+.authorDonate {
+  max-width: 300px;
+  text-align: center;
+}
+
+.shareBox,
+.citeBox {
+  max-width: 300px;
+}
+
+.shareBox {
+  @media print {
+    display: none;
+  }
+}
+
+.citationInfo {
+  font-family: monospace;
+  font-size: .8em;
+}
+
+.tinyArticle {
+  display: flex;
+  margin-bottom: 1em;
+  align-items: center;
+
+  header {
+    flex: 1;
+    margin-left: 1em;
+  }
+
+  .title {
+    font-family: $font-family-serif;
+    color: $text-dark;
+  }
+
+  date {
+    display: block;
+    margin-top: -.2em;
+    font-size: .8em;
+    color: $medium-gray;
+  }
+}

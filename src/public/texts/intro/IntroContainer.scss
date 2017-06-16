@@ -1,0 +1,8 @@
+@import "~theme/variables";
+
+.IntroContainer {
+  padding: 2em;
+  @media (min-width: $screen-md-min) {
+    padding: 4em;
+  }
+}

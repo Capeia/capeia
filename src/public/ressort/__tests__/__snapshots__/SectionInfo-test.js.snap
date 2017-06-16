@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionInfo> renders correctly 1`] = `
+<div>
+  <div
+    className="overlay"
+  />
+  <div
+    className="wrapper"
+  >
+    <div
+      className={undefined}
+    >
+      <div
+        className="Lead"
+        style={undefined}
+      >
+        
+      </div>
+      <div
+        className="container-fluid"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="contentContainer  col-lg-6 col-lg-offset-3 col-md-8"
+          >
+            <div
+              className={undefined}
+            >
+              <div
+                className="text"
+              >
+                <div>
+                  foo
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sidebarContainer col-lg-3 col-md-4"
+          >
+            <aside
+              className="sidebar"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,81 @@
+@import '~theme/variables';
+@import '~theme/typography';
+
+.AotmBox {
+  h1 {
+    margin-bottom: .1em;
+  }
+
+  // Specificity is wrong, fix in SidebarLayout (no need for .h2)
+  .h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.3em;
+  }
+}
+
+.current {
+  display: flex;
+  margin: 1.5em 0;
+  align-items: center;
+}
+
+.aotmLink {
+  color: $text-dark;
+
+  &:hover {
+    color: $text-dark;
+    text-decoration: none;
+  }
+}
+
+.affiliation {
+  margin-top: -.2em;
+  font-size: .8em;
+}
+
+.facts {
+  @include sans-serif-bold;
+  display: flex;
+  margin: .2em 0;
+
+  div + div {
+    margin-left: 1em;
+  }
+
+  .score {
+    color: $primary-red;
+  }
+
+  .label {
+    font-size: .8em;
+    color: $medium-gray;
+  }
+}
+
+.congrats {
+  font-family: $font-family-serif;
+  font-style: italic;
+}
+
+.info {
+  margin-left: 1em;
+}
+
+.donate {
+  // TODO: Since use a padding/margin hack (see CyclingDonorBadges), make sure this is still clickable
+  position: relative;
+  z-index: 2;
+
+  // TODO: Since we have a fixed height on donation messages, these sometimes
+  // overflow vertically on mobile. We thus need a little more space here.
+  margin: 1.8em 0;
+
+  @media (min-width: $screen-lg-min) {
+    margin: 1.2em 0;
+  }
+}
+
+.bonus {
+  color: $money-green;
+}

@@ -1,0 +1,42 @@
+@import '~theme/variables';
+
+.amount {
+  font-size: 1.6em;
+}
+
+.info {
+  flex: 1;
+  margin-left: 1em;
+}
+
+.title {
+  margin-bottom: -.3em;
+  font-family: $font-family-serif;
+  font-size: 1.8em;
+}
+
+.description {
+  color: gray;
+}
+
+.sectionLabel {
+  margin: 2rem 2rem !important; // FIXME
+  margin-bottom: 1rem !important;
+  font-size: 1.4em;
+
+  &:first-child {
+    margin-top: 0 !important;
+  }
+}
+
+// FIXME: Move this to generale purpose DashboardBox sub-component
+.rewardsActions {
+  padding-top: 1em;
+  margin-top: 1em !important; // FIXME
+  border-top: solid 1px #e7e7e7;
+  margin-left: 0 !important;
+  padding-left: 1em;
+  margin-right: 0 !important;
+  padding-right: 1em;
+  text-align: right;
+}

@@ -1,0 +1,131 @@
+@import '~theme/variables';
+@import '~theme/typography';
+
+@mixin footer-fonts {
+  @include sans-serif-normal;
+  color: darken($text-light, 20);
+}
+
+// scss-lint:disable SelectorFormat TODO
+.page-footer {
+  @include footer-fonts;
+  background: $dark;
+  padding: 3em 1em;
+  position: relative;
+  z-index: 10;
+
+  @media (min-width: $screen-sm-min) {
+    padding: 3em 6em;
+  }
+
+  h1 {
+    @include footer-fonts;
+    cursor: default;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    user-select: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: .5em 0;
+  }
+
+  span {
+    @include footer-fonts;
+    font-size: .9em;
+  }
+
+  a {
+    @include footer-fonts;
+    font-size: .9em;
+    transition: color 300ms ease-in-out;
+
+    &:hover {
+      color: $text-light;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.soon {
+  // scss-lint:disable ImportantRule FIXME
+  color: lighten($dark, 20) !important;
+  cursor: default;
+  user-select: none;
+}
+
+.backToTop {
+  padding-bottom: 2em;
+  text-align: center;
+
+  @media (min-width: $screen-md-min) {
+    display: none;
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-color: transparent transparent $text-light;
+    border-style: solid;
+    border-width: 0 1.5em 1.5em;
+    opacity: .8;
+  }
+}
+
+.footer-logo {
+  // scss-lint:disable ImportantRule FIXME
+  background: url('../../static/capeia_logo_1c_white.svg') center center no-repeat transparent;
+  background-size: contain !important;
+  height: 4em;
+  margin: 0 auto 2em;
+  opacity: .75;
+  width: 15em;
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.twitterIcon {
+  display: inline-block;
+  margin-right: .4em;
+  vertical-align: text-bottom;
+}
+
+.netidee {
+  padding-top: 2em;
+  font-size: .6em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.7;
+
+  &::before {
+    display: block;
+    padding: 1.4em;
+    margin-bottom: 1em;
+    content: '';
+    background: url('../../static/netidee_logo_1c.png') center center no-repeat;
+    background-size: contain;
+  }
+}
+
+@media print {
+  .page-footer {
+    display: none;
+  }
+}

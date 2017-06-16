@@ -1,0 +1,66 @@
+@import '~theme/variables';
+@import '~theme/shared/rich-text';
+
+.articleMediaBlock {
+  margin: $article-paragraph-margin;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.container {
+  position: relative;
+  text-align: center;
+
+  // TODO: Direct copy of the editor image block overlay!
+  .infoOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    font-family: $font-family-sans-serif;
+    color: #fff;
+    user-select: none;
+    background: rgba(0,0,0,.4);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.description {
+  @include image-description;
+}
+
+.ImageInfo {
+  font-size: .7em;
+
+  .licenseIcons img {
+    display: inline-block;
+    margin: 0 2px;
+  }
+
+  a {
+    color: saturate(lighten(#5cb85c, 20), 30);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.videoWrapper {
+  @include video-wrapper;
+}
+
+.videoPlayer {
+  @include video-player;
+}

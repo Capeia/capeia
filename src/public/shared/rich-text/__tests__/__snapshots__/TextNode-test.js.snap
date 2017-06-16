@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextNode> renders correctly 1`] = `
+<span
+  style={Object {}}
+>
+  Hello World
+</span>
+`;
+
+exports[`<TextNode> renders correctly 2`] = `
+<span
+  style={
+    Object {
+      "fontWeight": "bold",
+    }
+  }
+>
+  hello world
+</span>
+`;
+
+exports[`<TextNode> renders correctly 3`] = `
+<span
+  style={
+    Object {
+      "fontSize": "0.7em",
+      "fontStyle": "italic",
+      "verticalAlign": "sub",
+    }
+  }
+>
+  foo bar
+</span>
+`;
+
+exports[`<TextNode> renders correctly 4`] = `
+<span
+  style={
+    Object {
+      "fontSize": "0.7em",
+      "textDecoration": "underline",
+      "verticalAlign": "super",
+    }
+  }
+>
+  baz
+</span>
+`;

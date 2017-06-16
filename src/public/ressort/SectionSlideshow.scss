@@ -1,0 +1,33 @@
+@import '~theme/variables';
+
+.SectionSlideshow,
+.leadWrapper {
+  width: inherit;
+}
+
+.leadWrapper {
+  > div {
+    // We need to stack them vertically for transitions
+    position: fixed;
+  }
+}
+
+.imageInfoBtn {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  // display above HeroInfo overlay
+  z-index: 101;
+  width: 1.5em;
+  height: 1.5em;
+  font-family: $font-family-serif;
+  color: $text-light;
+  text-align: center;
+  border: solid 2px $text-light;
+  border-radius: 50%;
+  transition: transform 200ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

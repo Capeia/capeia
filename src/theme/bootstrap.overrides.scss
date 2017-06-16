@@ -1,0 +1,107 @@
+// Overrides for some bootstrap components.
+// TODO: Some of these may no longer be needed, weed out
+// scss-lint:disable SelectorFormat SelectorDepth SingleLinePerSelector
+
+@import 'variables';
+@import 'typography';
+@import 'shared/buttons';
+@import 'shared/input';
+
+@media print {
+  html, body {
+    height: auto !important;
+  }
+}
+
+body {
+  @include sans-serif-normal;
+}
+
+.navbar-brand {
+  padding-left: 50px;
+  position: relative;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  color: $dashboard-bright;
+}
+
+// Headings
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-family-serif;
+}
+
+// Buttons
+
+.btn {
+  @extend %btn;
+}
+
+.input-group .btn {
+  border-color: #cecece;
+  border-width: 1px;
+
+  &:hover {
+    background: $light-gray;
+    color: $text-dark;
+  }
+}
+
+// Lists
+
+ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+// Forms
+
+.form-control {
+  @extend %input;
+}
+
+label {
+  color: $medium-gray;
+  font-size: .7em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+// Misc
+
+hr {
+  margin: 16px 0;
+}
+
+.table {
+  thead > tr > th {
+    @include sans-serif-bold;
+    border-bottom: solid 1px $table-border-color;
+  }
+
+  tbody > tr > td {
+    vertical-align: middle;
+  }
+}
+
+dt {
+  @include sans-serif-bold;
+  font-family: inherit;
+}
+
+b, strong {
+  @include sans-serif-bold;
+}
+
+.popover {
+  @include sans-serif-normal;
+}
+
+.label {
+  @include sans-serif-bold;
+}

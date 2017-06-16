@@ -1,0 +1,98 @@
+@import "~theme/variables.scss";
+@import '~theme/typography';
+
+$active: lighten(#06a, 20);
+$smaller: 0.8em;
+
+.MediaLibrary {
+  :global(.form-group), :global(.help-block) {
+    margin-bottom: 0;
+  }
+}
+
+.validationError {
+  color: red;
+  padding: 0.2em 0;
+  font-size: $smaller;
+}
+
+.MediaDropzone {
+  .uploadHelp {
+    padding: 1em;
+    text-align: center;
+    border: dotted 2px #ddd;
+    color: #aaa;
+    cursor: pointer;
+  }
+
+  &.active {
+    // also target the .MediaDropzone wrapping the thumbnails
+    .uploadHelp, & + .MediaDropzone .uploadHelp {
+      border-color: $active;
+      color: $active;
+    }
+  }
+}
+
+.nav {
+  margin: 0.5em 0;
+
+  * {
+    &:last-child {
+      float: right;
+    }
+  }
+}
+
+.MediaGrid {
+  // FIXME this is arbitrary (but a little smaller values (466) can sometimes cause weird flexbox behavior)
+  max-width: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.GridItem {
+  // FIXME is this arbitrary
+  margin-bottom: 4px;
+  border: solid 2px transparent;
+  cursor: pointer;
+  &.selected {
+    border-color: $active;
+  }
+}
+
+.MediaDetails {
+  // FIXME this is arbitrary (same as .MediaGrid)
+  width: 480px;
+
+  img {
+    max-width: 100%;
+  }
+
+  table {
+    width: 100%;
+    margin: 1em 0;
+    border-spacing: 0 1em;
+    border-collapse: separate;
+  }
+
+  tr {
+    vertical-align: top;
+  }
+
+  td:first-child {
+    width: 30%;
+    @include sans-serif-bold;
+  }
+
+  td:last-child {
+    width: 70%;
+
+    .help {
+      display: block;
+      font-size: $smaller;
+      color: #aaa;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@mixin button {
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  transition: color 100ms ease-in-out;
+  cursor: pointer;
+}
+
+@mixin flexField {
+  display: flex;
+  align-items: center;
+}
+
+.fieldDisplay {
+  @include flexField;
+  cursor: pointer;
+  word-break: break-all;
+  word-break: break-word; // preferable, but non-standard (WebKit)
+
+  .editButton {
+    @include button;
+    color: #bbb;
+
+    &.spinning {
+      @keyframes rotate {
+        from { transform: rotate(0deg) }
+        to { transform: rotate(360deg) }
+      }
+      animation-name: rotate;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+  &:hover .editButton {
+    color: #000;
+  }
+}
+
+.placeholder {
+  color: #bbb;
+}
+
+.fieldInput {
+  @include flexField;
+
+  textarea {
+    border: none;
+    padding: 0;
+    line-height: 1.3; // TODO: this is empirically tested
+    vertical-align: middle;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .saveButton, .cancelButton {
+      @include button;
+      vertical-align: top;
+  }
+}

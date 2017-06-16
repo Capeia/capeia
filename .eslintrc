@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "flowtype",
+    "jest",
+    "local-rules"
+  ],
+  "rules": {
+    "flowtype/define-flow-type": 1,
+    "flowtype/use-flow-type": 1,
+    "local-rules/submodule-imports": 2
+  },
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:jest/recommended"
+  ],
+  "env": {
+    "jest/globals": true
+  }
+}

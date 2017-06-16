@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Who> renders correctly 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="IntroContainer row"
+  >
+    <div
+      className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"
+    >
+      <div
+        className=""
+      >
+        <h1>
+          Who
+        </h1>
+        <div
+          className="row"
+          style={
+            Object {
+              "marginBottom": "2em",
+            }
+          }
+        >
+          <div
+            className="col-md-3"
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <img
+              src="who/portrait_rs.jpg"
+              style={
+                Object {
+                  "height": "auto",
+                  "width": 200,
+                }
+              }
+            />
+          </div>
+          <div
+            className="col-md-9"
+          >
+            <p>
+              Rüdiger Schweigreiter is a biologist with a PhD in neuroscience. He lives and works in both Innsbruck and Vienna. Born and raised in the Alps, he spends as much time as possible in Australia. Bushwalking in the Blue Mountains or spending a night in Tasmania\`s Central Highlands provide memorable impressions that he would not want to miss.
+            </p>
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-md-3 col-md-push-9"
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            <img
+              src="who/portrait_ps.jpg"
+              style={
+                Object {
+                  "height": "auto",
+                  "width": 200,
+                }
+              }
+            />
+          </div>
+          <div
+            className="col-md-9 col-md-pull-3"
+          >
+            <p>
+              Philip Salzmann is a software engineer and web designer based in Austria. He believes that education is the most valuable resource of the present. Fascinated by science since his early childhood days, he looks forward to read about new developments in all areas on Capeia.com!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

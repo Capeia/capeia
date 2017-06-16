@@ -1,0 +1,41 @@
+.Reward {
+  width: 300px;
+  padding: 1em;
+  margin: 0 1em;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  border: solid 1px #eee;
+  border-radius: 3px;
+  transition: all 150ms ease-in-out;
+
+  &.selected,
+  &:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, .1);
+    transform: scale(1.05);
+  }
+
+  &.selected {
+    border-color: #5cc0a8;
+  }
+}
+
+.amount {
+  font-size: 2em;
+}
+
+.orMore {
+  margin-top: -.8em;
+  margin-bottom: 1em;
+  color: #808080;
+}
+
+.title {
+  margin-top: 0;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.description {
+  font-size: .8em;
+}

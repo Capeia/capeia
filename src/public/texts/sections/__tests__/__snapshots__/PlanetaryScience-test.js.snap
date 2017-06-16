@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlanetaryScience> renders correctly 1`] = `
+<div>
+  <p>
+    <strong>
+      Europa, one of Jupiter’s four large moons, looming in front of the Galileo spacecraft.
+    </strong>
+  </p>
+  <p>
+    Over the centuries the planets have been in the focus of visionaries musing about life beyond Earth. “Follow the water” has been the leitmotif of researchers looking for simple life elsewhere in the solar system. Mars was once considered to be a good candidate and worthy of closer inspection, but despite NASA’s tremendous efforts over the last few decades, no signs of life have been found. More recently, the icy moons of Jupiter and Saturn have attracted the attention of planetary scientists and astrobiologists. We now know that water is much more abundant on the icy moons than on Mars. While water is available on the red planet as a thin ice sheet at its north pole and a few patches of brine, Europa presumably has more liquid water than the whole of planet Earth! Data from previous visits by spacecraft suggest that Europa has a crust of frozen water 15 – 25 km thick, below which lies an ocean of liquid water covering the whole surface of the moon and reaching depths of 60 – 150 km. This ocean is thought to be in direct contact with the moon’s rocky mantle; tidal heating due to the gravity of mighty Jupiter means Europa’s interior stays warm and the water remains liquid. Furthermore, hydrothermal vents are suspected to exist on the ocean’s floor, which is highly supportive for the notion of life on Europa. But when will we know? Both NASA and the ESA are currently preparing missions to Jupiter’s icy moons; the ESA has scheduled the launch of its 
+    <a
+      href="http://sci.esa.int/juice/"
+      target="_blank"
+    >
+      <em>
+        Jupiter Icy Moon Explorer
+      </em>
+       (JUICE)
+    </a>
+     for lift-off in June 2022 and NASA also plans to launch its 
+    <a
+      href="http://www.nasa.gov/europa/"
+      target="_blank"
+    >
+      <em>
+        Europa Multiple Flyby Mission
+      </em>
+    </a>
+     in the early 2020s. The resulting much-awaited new data will unfortunately not come in before 2030. Patience has always been a virtue for planetary enthusiasts!
+  </p>
+  <p>
+    <em>
+      (Image credit: NASA/JPL-Caltech/SETI Institute)
+    </em>
+  </p>
+</div>
+`;

@@ -1,0 +1,845 @@
+input AddCommentInput {
+  postId: ID!
+  respondTo: ID
+  authorName: String
+  authorEmail: String
+  content: String!
+  clientMutationId: String
+}
+
+type AddCommentPayload {
+  newCommentEdge: CommentEdge!
+  clientMutationId: String
+}
+
+input AddDonationInfosInput {
+  donationId: ID!
+  infoToken: String!
+  name: String
+  country: String
+  location: String
+  note: String
+  clientMutationId: String
+}
+
+type AddDonationInfosPayload {
+  updatedDonation: Donation
+  clientMutationId: String
+}
+
+type Affiliation {
+  institute: Institute
+
+  # Custom identifier used to route funds internally at institute (can be anything).
+  identifier: String
+}
+
+type Application implements Node {
+  # The ID of an object
+  id: ID!
+  applicant: User!
+  date: String!
+  modified: String!
+  status: ApplicationStatus!
+
+  # Name of the institute the applicant is currently affiliated with
+  institute: String
+
+  # Country of the institute the applicant is currently affiliated with
+  instituteCountry: String
+  facultyWebsite: String
+  pub1Title: String
+  pub1Url: String
+  pub2Title: String
+  pub2Url: String
+  notes: String
+}
+
+# A connection to a list of items.
+type ApplicationConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [ApplicationEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type ApplicationEdge {
+  # The item at the end of the edge
+  node: Application
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+enum ApplicationStatus {
+  active
+  accepted
+  denied
+}
+
+type Auth {
+  me: User
+  realUser: User
+}
+
+type AuthorOfTheMonth {
+  year: Int!
+  month: Int!
+  author: User
+  score: Float
+  bonus: Int
+  articles: [Post]
+
+  # All AotM donations (independent of given year / month)
+  donations(after: String, first: Int, before: String, last: Int, page: Int): DonationConnection
+}
+
+enum AuthorType {
+  guest
+  author
+  editor
+  instituteManager
+}
+
+type Category implements Node {
+  # The ID of an object
+  id: ID!
+  name: String!
+  slug: String!
+  posts(search: String, after: String, first: Int, before: String, last: Int, page: Int): PostConnection
+}
+
+# A connection to a list of items.
+type CategoryConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [CategoryEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type CategoryEdge {
+  # The item at the end of the edge
+  node: Category
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type Comment implements Node {
+  # The ID of an object
+  id: ID!
+  post: Post!
+  parent: Comment
+
+  # Author of the comment, if one exists.
+  author: User
+  authorName: String
+  date: String!
+  content: String!
+  comments(after: String, first: Int, before: String, last: Int, page: Int): CommentConnection
+}
+
+# A connection to a list of items.
+type CommentConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [CommentEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type CommentEdge {
+  # The item at the end of the edge
+  node: Comment
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input ConnectStripeInput {
+  institute: ID!
+  clientMutationId: String
+}
+
+type ConnectStripePayload {
+  clientId: String!
+  csrfToken: String!
+  clientMutationId: String
+}
+
+input CreateAuthorInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String
+  handle: String!
+  fieldOfExpertise: ID!
+  institute: ID!
+  type: AuthorType!
+  clientMutationId: String
+}
+
+type CreateAuthorPayload {
+  newAuthorEdge: UserEdge!
+  clientMutationId: String
+}
+
+input CreateInstituteInput {
+  name: String!
+  country: String!
+  website: String!
+  clientMutationId: String
+}
+
+type CreateInstitutePayload {
+  newInstituteEdge: InstituteEdge!
+  clientMutationId: String
+}
+
+input CreatePostInput {
+  title: String!
+  category: ID!
+  clientMutationId: String
+}
+
+type CreatePostPayload {
+  newPostEdge: PostEdge!
+  clientMutationId: String
+}
+
+input CreateRewardInput {
+  title: String!
+  description: String!
+  minAmount: Int!
+  clientMutationId: String
+}
+
+type CreateRewardPayload {
+  newRewardEdge: RewardEdge!
+  clientMutationId: String
+}
+
+type Donation implements Node {
+  # The ID of an object
+  id: ID!
+  modified: String
+  amount: Int
+  status: String
+  error: String
+  stripeChargeId: String
+  isTest: Boolean
+  donorName: String
+  donorCountry: String
+  donorFlagUrl: String
+  donorLocation: String
+  donorNote: String
+  donorEmail: String
+  donee: User
+}
+
+# A connection to a list of items.
+type DonationConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [DonationEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type DonationEdge {
+  # The item at the end of the edge
+  node: Donation
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type Donations {
+  made(after: String, first: Int, before: String, last: Int, page: Int): DonationConnection
+  received(after: String, first: Int, before: String, last: Int, page: Int): DonationConnection
+}
+
+enum ImageSize {
+  thumbnail
+  full
+}
+
+type Institute implements Node {
+  # The ID of an object
+  id: ID!
+  name: String
+  slug: String
+  website: String
+  country: String
+  stripeAccountId: String
+
+  # Whether this institute has an associated Stripe account id.
+  hasStripeAccount: Boolean!
+  authors(after: String, first: Int, before: String, last: Int, page: Int): UserConnection
+}
+
+# A connection to a list of items.
+type InstituteConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [InstituteEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type InstituteEdge {
+  # The item at the end of the edge
+  node: Institute
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input MakeAotmDonationInput {
+  donorEmail: String!
+  token: String!
+  amount: Int!
+  clientMutationId: String
+}
+
+type MakeAotmDonationPayload {
+  newDonationEdge: DonationEdge!
+  infoToken: String!
+  clientMutationId: String
+}
+
+input MakeDonationInput {
+  donee: ID!
+  donorEmail: String!
+  token: String!
+  amount: Int!
+  reward: String
+  clientMutationId: String
+}
+
+type MakeDonationPayload {
+  newDonationEdge: DonationEdge!
+  infoToken: String!
+  clientMutationId: String
+}
+
+input MarkRewardClaimCompleteInput {
+  rewardClaim: ID!
+  clientMutationId: String
+}
+
+type MarkRewardClaimCompletePayload {
+  updatedRewardClaim: RewardClaim!
+  clientMutationId: String
+}
+
+type Media implements Node {
+  # The ID of an object
+  id: ID!
+  title: String
+  description: String
+  date: String
+  url(size: ImageSize): String
+  createdByAuthor: Boolean
+
+  # The person who uploaded this image
+  author: User
+  license: String
+  creator: String
+  originalUrl: String
+  havePermission: Boolean
+}
+
+# A connection to a list of items.
+type MediaConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [MediaEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type MediaEdge {
+  # The item at the end of the edge
+  node: Media
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type MorePageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  page: Int
+  totalPages: Int
+}
+
+type Mutation {
+  signIn(input: SignInInput!): SignInPayload
+  setEffectiveUser(input: SetEffectiveUserInput!): SetEffectiveUserPayload
+  revertToRealUser(input: RevertToRealUserInput!): RevertToRealUserPayload
+  createPost(input: CreatePostInput!): CreatePostPayload
+  updatePost(input: UpdatePostInput!): UpdatePostPayload
+  setPostExcerpt(input: SetPostExcerptInput!): SetPostExcerptPayload
+  setPostEditorial(input: SetPostEditorialInput!): SetPostEditorialPayload
+  publishPost(input: PublishPostInput!): PublishPostPayload
+  submitPostForReview(input: SubmitPostForReviewInput!): SubmitPostForReviewPayload
+  uploadMedia(input: UploadMediaInput!): UploadMediaPayload
+  updateMedia(input: UpdateMediaInput!): UpdateMediaPayload
+  registerAuthor(input: RegisterAuthorInput!): RegisterAuthorPayload
+  createAuthor(input: CreateAuthorInput!): CreateAuthorPayload
+  updateAuthor(input: UpdateAuthorInput!): UpdateAuthorPayload
+  setAuthorInstitute(input: SetAuthorInstituteInput!): SetAuthorInstitutePayload
+  setAffiliationIdentifier(input: SetAffiliationIdentifierInput!): SetAffiliationIdentifierPayload
+  setAllowSiteDonations(input: SetAllowSiteDonationsInput!): SetAllowSiteDonationsPayload
+  createInstitute(input: CreateInstituteInput!): CreateInstitutePayload
+  connectStripe(input: ConnectStripeInput!): ConnectStripePayload
+  makeDonation(input: MakeDonationInput!): MakeDonationPayload
+  makeAotmDonation(input: MakeAotmDonationInput!): MakeAotmDonationPayload
+  addDonationInfos(input: AddDonationInfosInput!): AddDonationInfosPayload
+  addComment(input: AddCommentInput!): AddCommentPayload
+  setApplicationStatus(input: SetApplicationStatusInput!): SetApplicationStatusPayload
+  createReward(input: CreateRewardInput!): CreateRewardPayload
+  setRewardActive(input: SetRewardActiveInput!): SetRewardActivePayload
+  markRewardClaimComplete(input: MarkRewardClaimCompleteInput!): MarkRewardClaimCompletePayload
+}
+
+# An object with an ID
+interface Node {
+  # The id of the object.
+  id: ID!
+}
+
+# Information about pagination in a connection.
+type PageInfo {
+  # When paginating forwards, are there more items?
+  hasNextPage: Boolean!
+
+  # When paginating backwards, are there more items?
+  hasPreviousPage: Boolean!
+
+  # When paginating backwards, the cursor to continue.
+  startCursor: String
+
+  # When paginating forwards, the cursor to continue.
+  endCursor: String
+}
+
+type Post implements Node {
+  # The ID of an object
+  id: ID!
+  url: String
+  status: String
+  title: String!
+  slug: String!
+  excerpt: String!
+  content: String!
+  editorial: String!
+  date: String
+  modified: String
+
+  # A globally unique ID for this article.
+  citationId: String
+  category: Category!
+  author: User!
+  image: Media
+  comments(after: String, first: Int, before: String, last: Int, page: Int): CommentConnection
+
+  # The total score this article has accumulated
+  totalScore: Float
+}
+
+# A connection to a list of items.
+type PostConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [PostEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type PostEdge {
+  # The item at the end of the edge
+  node: Post
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+input PublishPostInput {
+  id: ID!
+  clientMutationId: String
+}
+
+type PublishPostPayload {
+  publishedPost: Post
+  clientMutationId: String
+}
+
+type Query {
+  # Fetches an object given its ID
+  node(
+    # The ID of an object
+    id: ID!
+  ): Node
+  postBySlug(slug: String): Post
+  categoryBySlug(slug: String): Category
+  viewer: Viewer
+  auth: Auth
+  authorByHandle(handle: String): User
+}
+
+input RegisterAuthorInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  handle: String!
+  password: String!
+  confirmPassword: String!
+  degree: String!
+  customDegree: String
+  fieldOfExpertise: ID!
+  institute: String!
+  instituteCountry: String!
+  facultyWebsite: String!
+  pub1Title: String!
+  pub1Url: String!
+  pub2Title: String!
+  pub2Url: String!
+  notes: String
+  agreement: String!
+  clientMutationId: String
+}
+
+type RegisterAuthorPayload {
+  clientMutationId: String
+}
+
+input RevertToRealUserInput {
+  clientMutationId: String
+}
+
+type RevertToRealUserPayload {
+  authToken: String
+  clientMutationId: String
+}
+
+type Reward implements Node {
+  # The ID of an object
+  id: ID!
+  title: String!
+  description: String!
+  minAmount: Int!
+  limit: RewardLimit
+  active: Boolean!
+  author: User!
+}
+
+type RewardClaim implements Node {
+  # The ID of an object
+  id: ID!
+  date: String!
+  modified: String!
+  reward: Reward!
+  status: RewardClaimStatus!
+  donation: Donation!
+}
+
+# A connection to a list of items.
+type RewardClaimConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [RewardClaimEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type RewardClaimEdge {
+  # The item at the end of the edge
+  node: RewardClaim
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+enum RewardClaimStatus {
+  # This claim has yet to be fulfilled
+  ACTIVE
+
+  # This claim has been completed
+  COMPLETE
+}
+
+# A connection to a list of items.
+type RewardConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [RewardEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type RewardEdge {
+  # The item at the end of the edge
+  node: Reward
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+type RewardLimit {
+  total: Int!
+  available: Int!
+}
+
+input SetAffiliationIdentifierInput {
+  authorId: ID!
+  identifier: String!
+  clientMutationId: String
+}
+
+type SetAffiliationIdentifierPayload {
+  updatedAuthor: User
+  clientMutationId: String
+}
+
+input SetAllowSiteDonationsInput {
+  id: ID!
+  allow: Boolean!
+  clientMutationId: String
+}
+
+type SetAllowSiteDonationsPayload {
+  updatedAuthor: User
+  clientMutationId: String
+}
+
+input SetApplicationStatusInput {
+  applicationId: ID!
+  status: ApplicationStatus!
+  clientMutationId: String
+}
+
+type SetApplicationStatusPayload {
+  application: Application
+  user: User
+  clientMutationId: String
+}
+
+input SetAuthorInstituteInput {
+  id: ID!
+  institute: ID!
+  clientMutationId: String
+}
+
+type SetAuthorInstitutePayload {
+  updatedAuthor: User
+  clientMutationId: String
+}
+
+input SetEffectiveUserInput {
+  effectiveUserId: String!
+  clientMutationId: String
+}
+
+type SetEffectiveUserPayload {
+  authToken: String
+  clientMutationId: String
+}
+
+input SetPostEditorialInput {
+  postId: ID!
+  editorial: String!
+  clientMutationId: String
+}
+
+type SetPostEditorialPayload {
+  updatedPost: Post
+  clientMutationId: String
+}
+
+input SetPostExcerptInput {
+  postId: ID!
+  excerpt: String!
+  clientMutationId: String
+}
+
+type SetPostExcerptPayload {
+  updatedPost: Post
+  clientMutationId: String
+}
+
+input SetRewardActiveInput {
+  reward: ID!
+  active: Boolean!
+  clientMutationId: String
+}
+
+type SetRewardActivePayload {
+  updatedReward: Reward!
+  clientMutationId: String
+}
+
+input SignInInput {
+  email: String!
+  password: String!
+  clientMutationId: String
+}
+
+type SignInPayload {
+  authToken: String
+  clientMutationId: String
+}
+
+input SubmitPostForReviewInput {
+  id: ID!
+  clientMutationId: String
+}
+
+type SubmitPostForReviewPayload {
+  post: Post
+  clientMutationId: String
+}
+
+input UpdateAuthorInput {
+  id: ID!
+  firstName: String
+  lastName: String
+  shortBio: String
+  pictureId: ID
+  profileBio: String
+  profileResearch: String
+  profileIncentive: String
+  profilePublications: String
+  profileRecommendations: String
+  twitterHandle: String
+  facebookPage: String
+  youtubeChannel: String
+  clientMutationId: String
+}
+
+type UpdateAuthorPayload {
+  updatedAuthor: User
+  clientMutationId: String
+}
+
+input UpdateMediaInput {
+  id: ID!
+  title: String
+  description: String
+  createdByAuthor: Boolean
+  license: String
+  creator: String
+  originalUrl: String
+  havePermission: Boolean
+  clientMutationId: String
+}
+
+type UpdateMediaPayload {
+  updatedMedia: Media
+  clientMutationId: String
+}
+
+input UpdatePostInput {
+  id: ID!
+  title: String
+  content: String
+  imageId: String
+  clientMutationId: String
+}
+
+type UpdatePostPayload {
+  updatedPost: Post
+  clientMutationId: String
+}
+
+input UploadMediaInput {
+  clientMutationId: String
+}
+
+type UploadMediaPayload {
+  newMediaEdge: MediaEdge!
+  clientMutationId: String
+}
+
+type User implements Node {
+  # The ID of an object
+  id: ID!
+  name: String!
+  firstName: String!
+  lastName: String!
+  slug: String!
+  email: String
+  type: String
+  degree: String
+  fieldOfExpertise: Category
+  affiliation: Affiliation!
+  canReceiveDonations: Boolean!
+  canReceiveSiteDonations: Boolean
+  shortBio: String
+  profileBio: String
+  profileResearch: String
+  profileIncentive: String
+  profilePublications: String
+  profileRecommendations: String
+  picture: Media
+  twitterHandle: String!
+  facebookPage: String!
+  youtubeChannel: String!
+  posts(publishedOnly: Boolean = true, after: String, first: Int, before: String, last: Int, page: Int): PostConnection
+  media(after: String, first: Int, before: String, last: Int, page: Int): MediaConnection
+  donations: Donations
+  rewards(active: Boolean = true, after: String, first: Int, before: String, last: Int, page: Int): RewardConnection
+  rewardClaims(after: String, first: Int, before: String, last: Int, page: Int): RewardClaimConnection
+}
+
+# A connection to a list of items.
+type UserConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [UserEdge!]!
+  morePageInfo: MorePageInfo!
+}
+
+# An edge in a connection.
+type UserEdge {
+  # The item at the end of the edge
+  node: User
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# Common entry-point for paginated objects.
+type Viewer implements Node {
+  # The ID of an object
+  id: ID!
+  posts(after: String, first: Int, before: String, last: Int, page: Int): PostConnection
+  applications(after: String, first: Int, before: String, last: Int, page: Int): ApplicationConnection
+  authors(after: String, first: Int, before: String, last: Int, page: Int): UserConnection
+  institutes(after: String, first: Int, before: String, last: Int, page: Int, search: String): InstituteConnection
+  categories(after: String, first: Int, before: String, last: Int, page: Int): CategoryConnection!
+  aotm(year: Int, month: Int): AuthorOfTheMonth!
+}

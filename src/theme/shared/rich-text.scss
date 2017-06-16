@@ -1,0 +1,95 @@
+@import '~theme/variables';
+
+$article-paragraph-margin: 1em 0;
+
+.articleContainer {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.textBody {
+  font-family: $font-family-serif;
+  font-size: 26px; // TODO: Proper vertical rhythm
+
+  @media print {
+    font-size: 18px;
+  }
+
+  font-feature-settings: 'onum', 'pnum';
+
+  p {
+    margin: $article-paragraph-margin;
+  }
+
+  pre {
+    border: none;
+    padding: 1.5em;
+  }
+
+  // Reset sans-serif-bold mixin 300/400 weight hack
+  b,
+  strong {
+    font-family: $font-family-serif;
+    font-weight: bold;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      // when changing this, ensure that Draft.js styles are the same
+      margin-left: 1.5em;
+      margin-top: 1em;
+      // it appears 'inside' breaks editor in FF!
+      list-style-position: outside;
+    }
+
+    ul {
+      list-style: circle;
+
+      ul {
+        list-style: square;
+      }
+    }
+  }
+}
+
+.articleThumbnail {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  position: relative; // required for score
+  display: inline-block;
+  background-position: center center;
+  background-size: contain;
+}
+
+// Used by ImageBlock, VideoBlock, ArticleImageBlock, ArticleVideoBlock.
+// TODO: Rename to media-description
+@mixin image-description {
+  font-family: $font-family-sans-serif;
+  color: #777;
+  font-size: .65em;
+  padding: .4em;
+}
+
+@mixin video-wrapper {
+  position: relative;
+  // FIXME: This assumes 16:9 aspect ratio for all videos!
+  padding-top: 56.25%; // 100 / (16 / 9)
+}
+
+@mixin video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Print page setup. TODO: Move elsewhere
+@page {
+  margin-top: 2cm;
+  margin-bottom: 2cm;
+}

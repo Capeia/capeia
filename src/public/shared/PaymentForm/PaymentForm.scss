@@ -1,0 +1,198 @@
+$active-tab-color: #5cc0a8;
+
+.PaymentForm {
+  position: relative; // for .submitOverlay
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  background: #fff;
+  border: solid 1px #eee;
+  border-radius: 5;
+  box-shadow: 0 0 14px rgba(0, 0, 0, .04);
+
+  .fieldError {
+    // above normal fields, but below focused fields
+    z-index: 1;
+    border-color: #ff0000;
+  }
+}
+
+.tabHeader {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.tab {
+  display: flex;
+  width: 50%;
+  padding: .8em;
+  color: #999;
+  background: #f9f9f9;
+  border-bottom: solid 1px #eee;
+  align-items: center;
+  justify-content: center;
+
+  &:first-child {
+    border-right: solid 1px #eee;
+    box-shadow: -3px -3px 8px rgba(0, 0, 0, 0.05) inset;
+  }
+
+  &:last-child {
+    border-left: solid 1px #eee;
+    box-shadow: 3px -3px 8px rgba(0, 0, 0, 0.05) inset;
+  }
+
+  &.active {
+    color: $active-tab-color;
+    background: white;
+    border-color: transparent;
+    box-shadow: none;
+
+    .step {
+      border-color: $active-tab-color;
+    }
+  }
+
+  .step {
+    border: solid 2px #AAA;
+    border-radius: 999em;
+    width: 2.3em;
+    height: 2.3em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .8em;
+    font-weight: bold;
+  }
+}
+
+.optional {
+  margin-top: -.3em;
+  font-size: .8em;
+}
+
+.tabContent {
+  padding: 25px;
+  padding-top: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.amountInputWrapper {
+  .amountInput {
+    width: 6em;
+    height: 2.4em;
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+}
+
+// the wrapper class only exists to increase CSS specificity
+.creditCardInput {
+  .number {
+    border-bottom: {
+      right-radius: 0;
+      left-radius: 0;
+    }
+  }
+
+  .inlineWrapper {
+    display: flex;
+    // overlap borders
+    margin-top: -1px;
+  }
+
+  .expiration {
+    // overlap borders
+    margin-right: -1px;
+    border-top: {
+      left-radius: 0;
+      right-radius: 0;
+    }
+    border-bottom-right-radius: 0;
+  }
+
+  .cvc {
+    border-top: {
+      left-radius: 0;
+      right-radius: 0;
+    }
+    border-bottom-left-radius: 0;
+  }
+
+  .number,
+  .expiration,
+  .cvc {
+    position: relative;
+
+    &.focus {
+      // bring it above the other inputs so the entire border is visible
+      z-index: 2;
+    }
+  }
+}
+
+.notice {
+  margin-bottom: 0;
+  font-size: .8em;
+  color: gray;
+  text-align: center;
+}
+
+.error {
+  padding: .3em;
+  color: white;
+  text-align: center;
+  background: #e81d1d;
+  border-radius: 4px;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.submitOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  background: rgba(255, 255, 255, .4);
+  align-items: center;
+  justify-content: center;
+
+  .spinner {
+    font-size: 2em;
+    animation: spinner 1.6s linear infinite;
+  }
+}
+
+.testModeIndicator {
+  padding: 1em;
+  margin-top: 2em;
+  text-align: center;
+  border: solid 2px red;
+}
+
+.reward {
+  text-align: center;
+}
+
+.rewardLabel {
+  display: inline-block;
+  padding: .2em .8em;
+  margin-bottom: 1em;
+  font-size: .8em;
+  color: white;
+  cursor: default;
+  background-color: $active-tab-color;
+  border-radius: 999em;
+}

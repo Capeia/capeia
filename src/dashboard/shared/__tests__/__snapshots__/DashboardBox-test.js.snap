@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardBox> renders correctly 1`] = `
+<div
+  className="DashboardBox"
+>
+  <div
+    className="content"
+  >
+    Hello World
+  </div>
+</div>
+`;
+
+exports[`<DashboardBox> renders correctly 2`] = `
+<div
+  className="DashboardBox"
+>
+  <header>
+    <h1>
+      Hello
+    </h1>
+    <p
+      className="description"
+    />
+  </header>
+  <div
+    className="content"
+  >
+    World
+  </div>
+</div>
+`;
+
+exports[`<DashboardBox> renders correctly 3`] = `
+<div
+  className="DashboardBox"
+>
+  <header>
+    <h1>
+      Hello
+    </h1>
+    <p
+      className="description"
+    >
+      World
+    </p>
+  </header>
+  <div
+    className="content"
+  />
+</div>
+`;

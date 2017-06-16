@@ -1,0 +1,9 @@
+.pageControls {
+  display: flex;
+  margin-top: 1em;
+  justify-content: space-between;
+
+  :global(.btn) {
+    padding: 0 1em;
+  }
+}

@@ -1,0 +1,23 @@
+@import '~theme/variables';
+@import '~theme/typography';
+
+$input-border-radius: 3px;
+$input-padding: 6px;
+$border-color: #e0e0e0;
+$border-color-focus: #50bdf1;
+$shadow-color: rgba(0, 0, 0, .02);
+
+%input {
+  @include sans-serif-normal;
+  width: 100%;
+  padding: $input-padding;
+  border: solid 1px $border-color;
+  border-radius: $input-border-radius;
+  box-shadow: inset 1px 1px 0 $shadow-color;
+  transition: border-color ease-in-out 150ms;
+
+  &:focus {
+    border: solid 1px $border-color-focus;
+    outline: none;
+  }
+}

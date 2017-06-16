@@ -1,0 +1,570 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FAQ> renders correctly 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="contentContainer  col-lg-6 col-lg-offset-3 col-md-8"
+    >
+      <div
+        className={undefined}
+      >
+        <h1
+          id="toc"
+        >
+          Frequently Asked Questions
+        </h1>
+        <ol
+          className="toc"
+          role="directory"
+        >
+          <li>
+            <a
+              href="#what-kind-of-initiative-is-capeia"
+            >
+              What kind of initiative is Capeia?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#how-can-i-contribute-to-capeia"
+            >
+              How can I contribute to Capeia?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#who-can-register-with-capeia"
+            >
+              Who can register with Capeia?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#how-much-does-it-cost-to-register-with-capeia"
+            >
+              How much does it cost to register with Capeia?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#i-am-a-registered-author-on-capeia-how-many-articles-am-i-expected-to-write-per-month"
+            >
+              I am a registered author on Capeia. How many articles am I expected to write per month?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#what-kind-of-articles-can-i-write"
+            >
+              What kind of articles can I write?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#how-can-donations-be-made"
+            >
+              How can donations be made?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#how-are-donations-processed"
+            >
+              How are donations processed?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#where-are-donations-paid-into"
+            >
+              Where are donations paid into?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#are-there-any-charges-involved-when-donations-are-received"
+            >
+              Are there any charges involved when donations are received?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#do-i-get-my-money-back-if-a-project-does-not-develop-as-expected"
+            >
+              Do I get my money back if a project does not develop as expected?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#is-the-donor-s-name-published-on-the-platform"
+            >
+              Is the donor’s name published on the platform?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#what-happens-to-the-balance-of-research-funding-if-the-research-is-terminated-unexpectedly"
+            >
+              What happens to the balance of research funding if the research is terminated unexpectedly?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#how-can-the-research-funds-be-employed"
+            >
+              How can the research funds be employed?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#is-there-a-maximum-duration-for-a-scientist-s-registration-on-the-platform"
+            >
+              Is there a maximum duration for a scientist’s registration on the platform?
+            </a>
+          </li>
+          <li>
+            <a
+              href="#how-is-the-author-of-the-month-selected"
+            >
+              How is the “Author of the Month” selected?
+            </a>
+          </li>
+        </ol>
+        <div
+          className=""
+        >
+          <div>
+            <article
+              id="what-kind-of-initiative-is-capeia"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                What kind of initiative is Capeia?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                Capeia is a new start-up in the online media business that focuses on communication and private funding of academic research activities.
+              </p>
+            </article>
+            <article
+              id="how-can-i-contribute-to-capeia"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                How can I contribute to Capeia?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <div>
+                <p>
+                  There are three ways to become involved:
+                </p>
+                <ul>
+                  <li>
+                    As a scientist you can become an author on Capeia.
+                  </li>
+                  <li>
+                    As a curious and open-minded individual you can contribute to our lively discussions.
+                  </li>
+                  <li>
+                    As a sponsor you can fund scientists of your choice.
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article
+              id="who-can-register-with-capeia"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                Who can register with Capeia?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                Any scientist holding a PhD or MD with an academic affiliation is welcome to 
+                <a
+                  href="/register"
+                >
+                  submit an application
+                </a>
+                . After we have approved your application, you can immediately start to publish your first article.
+              </p>
+            </article>
+            <article
+              id="how-much-does-it-cost-to-register-with-capeia"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                How much does it cost to register with Capeia?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                There is no charge for registering with Capeia.
+              </p>
+            </article>
+            <article
+              id="i-am-a-registered-author-on-capeia-how-many-articles-am-i-expected-to-write-per-month"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                I am a registered author on Capeia. How many articles am I expected to write per month?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                There is no strict rule as to the required number of articles per month. Obviously, the more articles the better, but the number of articles should not come at a cost to their quality. Typically, 1 - 2 good quality articles per month of about 500 words should be fine to keep the public interest for your personal site up.
+              </p>
+            </article>
+            <article
+              id="what-kind-of-articles-can-i-write"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                What kind of articles can I write?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <div>
+                <p>
+                  That’s up to you and your imagination. You may, for example, like to write (about)
+                </p>
+                <ul>
+                  <li>
+                    recent publications in your area of research
+                  </li>
+                  <li>
+                    media reports on incidents in your field of expertise
+                  </li>
+                  <li>
+                    conference news
+                  </li>
+                  <li>
+                    news related to your own research
+                  </li>
+                  <li>
+                    a book review
+                  </li>
+                </ul>
+                <p>
+                  Please draft your articles in such a way that they will be intelligible and appealing to non-experts. Capeia is committed to original authorship and criticism. We expect your contributions to be unique in character, with a focus on interpretation and critical reflection. You may well cover mainstream news items but we expect you to provide an extra touch, for example by providing additional background information, or by putting recent news into a historical context, or by pointing out inconsistencies with current views or hypotheses.
+                </p>
+              </div>
+            </article>
+            <article
+              id="how-can-donations-be-made"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                How can donations be made?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <div>
+                <p>
+                  At present, donations can be made with all major credit cards.
+                </p>
+              </div>
+            </article>
+            <article
+              id="how-are-donations-processed"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                How are donations processed?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <div>
+                <p>
+                  Payments are processed by
+                   
+                  <a
+                    href="https://stripe.com"
+                    target="_blank"
+                  >
+                    Stripe
+                  </a>
+                  , a leading US-based online payment service provider, using the latest industry-standard encryption protocol.
+                </p>
+                <p>
+                  Capeia does not store any credit card information on its servers.
+                </p>
+              </div>
+            </article>
+            <article
+              id="where-are-donations-paid-into"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                Where are donations paid into?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                All donations are 
+                <em>
+                  directly
+                </em>
+                 paid into the account of the specified scientist’s research institution. When registering on Capeia, every scientist is required to provide the bank details of his or her research institution and is assigned an internal number for tagging individual donations.
+              </p>
+            </article>
+            <article
+              id="are-there-any-charges-involved-when-donations-are-received"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                Are there any charges involved when donations are received?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                Yes, the author and scientist will be charged a 6.5% commission on all donations received. The commission will be used to cover management and maintenance costs for the site and to finance further development of the platform. In addition, the financial services providers usually charge a 1.0 – 1.5% handling fee, depending on the credit card used for the transaction.
+              </p>
+            </article>
+            <article
+              id="do-i-get-my-money-back-if-a-project-does-not-develop-as-expected"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                Do I get my money back if a project does not develop as expected?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <div>
+                <p>
+                  Short answer: No.
+                </p>
+                <p>
+                  More elaborate answer: Rather than promoting specific research projects on Capeia we offer our scientists a forum in which to present their ongoing research activities. We understand that research is a highly dynamic process that needs a lot of creative freedom to flourish and for this reason our scientists do not have projects that are pre-defined in great detail or have to be completed within a specified time frame. Instead we advocate “continuous funding for continuous research”. The more funding a scientist can raise the more quickly the research will be able to progress. Every cent of support is therefore valuable and makes a real difference.
+                </p>
+              </div>
+            </article>
+            <article
+              id="is-the-donor-s-name-published-on-the-platform"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                Is the donor’s name published on the platform?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                The donor’s name and address are only included in the list of donations with the donor’s explicit consent. Otherwise, the donation is listed as “anonymous”.
+              </p>
+            </article>
+            <article
+              id="what-happens-to-the-balance-of-research-funding-if-the-research-is-terminated-unexpectedly"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                What happens to the balance of research funding if the research is terminated unexpectedly?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                If a research activity is terminated for unforeseeable (and presumably rather sad) reasons, the residual balance is placed at the disposal of the research institution involved.
+              </p>
+            </article>
+            <article
+              id="how-can-the-research-funds-be-employed"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                How can the research funds be employed?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <div>
+                <p>
+                  The funds can be used for all research-related expenses, including
+                </p>
+                <ul>
+                  <li>
+                    Costs of scientific personnel
+                  </li>
+                  <li>
+                    Consumables
+                  </li>
+                  <li>
+                    Analyses
+                  </li>
+                  <li>
+                    Purchase and maintenance of equipment
+                  </li>
+                  <li>
+                    Travel expenses for scientific purposes
+                  </li>
+                  <li>
+                    Cost of publications
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article
+              id="is-there-a-maximum-duration-for-a-scientist-s-registration-on-the-platform"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                Is there a maximum duration for a scientist’s registration on the platform?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                Since we don’t promote specific research projects but rather offer our scientists a forum in which to present their ongoing research activities, there is no specific time limit for a scientist’s registration on Capeia. It does make a lot of sense, however, to routinely update one’s research activities and provide potential sponsors with an overview of future research plans.
+              </p>
+            </article>
+            <article
+              id="how-is-the-author-of-the-month-selected"
+            >
+              <p
+                className="question"
+                role="heading"
+              >
+                How is the “Author of the Month” selected?
+                 
+                <a
+                  href="#toc"
+                  title="Back to top"
+                >
+                  ↑
+                </a>
+              </p>
+              <p>
+                Capeia not only seeks to stimulate discussion but is also committed to spreading the information and ideas that are expressed on this website into the depths of the World Wide Web. So much so that we provide an extra crowdfunding scheme to collect funds with which to provide a reward on a monthly basis for the scientist whose contribution attracts the most attention. Read an article and then comment on it or share it via one of our media interfaces and you will promote its author for this prize. Every such activity generates points for an article and whichever author receives the most points over any particular month becomes the 
+                <strong>
+                  <a
+                    href="/author-of-the-month"
+                  >
+                    “Author of the Month”
+                  </a>
+                </strong>
+                ; the money collected in the prize pool is then paid into his or her research account. For transparency, the score of each article is indicated as it develops over time; a high score indicates that an article is in high demand and/or shared eagerly within the community. A registered author’s total score (i.e. the points for all of his or her articles) is shown on the author’s personal site.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sidebarContainer col-lg-3 col-md-4"
+    >
+      <aside
+        className="sidebar"
+      />
+    </div>
+  </div>
+</div>
+`;

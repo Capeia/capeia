@@ -1,0 +1,54 @@
+// Custom variables.
+
+$background-public: #fff;
+
+$nav-color: #333;
+
+$primary-red: #dc1b1b;
+$money-green: #1baf1b;
+$dark: #2f3240;
+$text-dark: #333;
+$text-light: #fff;
+
+$medium-gray: gray;
+$light-gray: #ececec;
+
+$dashboard-bright: #33e0ff;
+
+// Bootstrap variables.
+// http://getbootstrap.com/customize/
+// TODO: decide on these
+$brand-primary: #06a;
+//$brand-primary: #76B1A3;
+$brand-secondary: #e25139;
+$brand-success: #5cb85c;
+$brand-warning: #f0ad4e;
+$brand-danger: #d9534f;
+$brand-info: #5bc0de;
+
+$text-color: $text-dark;
+
+$toast-text: #fff;
+$toast-default: #505050;
+$toast-error: #c72c2c;
+$toast-success: #2cc77a;
+
+$font-size-base: 16px;
+$font-family-sans-serif: 'ministry', Arial, sans-serif;
+$font-family-serif: "garamond-premier-pro", "Times New Roman", serif;
+$font-family-base: $font-family-sans-serif;
+
+// TODO: Work this out and use for margins + paddings!
+// $line-height-base: 1.5;
+// $line-height-computed: floor($font-size-base * $line-height-base);
+// $headings-line-height: $line-height-base;
+
+// Basically a copy of Bootstraps variables.less
+// TODO: We shouldn't have to copy this here
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);

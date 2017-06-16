@@ -1,0 +1,169 @@
+@import './Draft';
+@import '~theme/variables';
+@import '~theme/shared/rich-text';
+
+$toolbar-light-gray: $light-gray;
+$toolbar-medium-gray: darken($light-gray, 10);
+
+:global {
+  // scss-lint:disable SelectorFormat SelectorDepth
+  //.public-DraftStyleDefault-block {
+  //  margin: $article-paragraph-margin;
+  //}
+  .public-DraftEditor-content > div > div {
+    margin: $article-paragraph-margin;
+  }
+}
+
+.capeiaEditor {
+  // for BlockTypeToolbar positioning
+  position: relative;
+}
+
+.blockToolbar {
+  border-right: solid 1px $light-gray;
+  left: -180px;
+  padding-bottom: .2em;
+  padding-right: 1em;
+  padding-top: .2em;
+  position: absolute;
+  text-align: right;
+
+  :global {
+    // scss-lint:disable NestingDepth
+
+    .btn {
+      border: 0;
+      color: $toolbar-medium-gray;
+      transition: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        background: transparent;
+        color: #333;
+      }
+
+      &.active {
+        background: transparent;
+        box-shadow: none;
+        color: #333;
+      }
+    }
+  }
+}
+
+// Floating toolbar, displayed when selecting text.
+// TODO: Move into own file
+.FloatingToolbar {
+  // scss-lint:disable SelectorDepth NestingDepth FIXME
+
+  $background: $text-dark;
+  $active: $dashboard-bright;
+
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+
+  .inner {
+    display: inline-block;
+    // move up the full container height so we can grow dynamically
+    margin-top: -100%;
+    position: relative;
+    // plus 1em for the triangle
+    top: -1em;
+
+    // triangle
+    &::after {
+      border-color: $background transparent transparent;
+      border-style: solid;
+      border-width: .8em .8em 0;
+      content: '';
+      display: inline-block;
+      height: 0;
+      position: relative;
+      top: -.4em;
+      width: 0;
+    }
+  }
+
+  .controls {
+    background: $background;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: .3em .4em;
+    pointer-events: all;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      $item-padding: .4em;
+
+      li {
+        cursor: pointer;
+        display: inline-block;
+        font-size: .9em;
+        padding: 0 $item-padding;
+
+        &.active {
+          color: $active;
+        }
+
+        &.disabled {
+          color: $toolbar-medium-gray;
+          cursor: default;
+        }
+
+        + li {
+          padding-left: 0;
+          // display separating lines on ::before, since the line height otherwise
+          // changes with control content (offenders are subscript & superscript)
+          &::before {
+            border-left: solid 1px $toolbar-light-gray;
+            content: '';
+            padding-left: $item-padding;
+          }
+        }
+
+      }
+    }
+
+    .styleBtn {
+      font-family: $font-family-serif;
+    }
+
+    // styling for entity overlays
+    input,
+    textarea {
+      background: $background;
+      border: solid 1px $toolbar-light-gray;
+      padding: .2em .4em;
+    }
+
+    button {
+      border: solid 1px $toolbar-light-gray;
+      color: #fff;
+    }
+
+    :global {
+      // scss-lint:disable SelectorFormat
+      .btn-group {
+        margin-left: 2px;
+        vertical-align: top;
+
+        .btn:hover {
+          background: transparent;
+          color: $active;
+        }
+      }
+    }
+  }
+}

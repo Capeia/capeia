@@ -1,0 +1,196 @@
+@import '~theme/variables';
+@import '~theme/typography';
+
+.aotmColumns {
+  display: flex;
+  padding: 4em 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  > div {
+    flex: 1;
+    max-width: 720px;
+    text-align: center;
+
+    // TODO: This is not ideal. Use fixed breakpoints (Bootstrap).
+    @media (min-width: 520px) {
+      min-width: 520px;
+    }
+
+    @media (min-width: 1040px) {
+      + div::before {
+        display: block;
+        float: left;
+        height: 70%;
+        margin-top: 10%;
+        content: ' ';
+        border-left: solid 1px $light-gray;
+      }
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.about {
+  display: flex;
+  padding: 2em;
+  text-align: center;
+  background: $light-gray;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin: 0 .4em;
+  }
+
+  &::before {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    content: '';
+    background: url('info.svg') no-repeat center center;
+    background-size: cover;
+    opacity: .5;
+  }
+}
+
+.currentBonusBadge {
+  $padding-h: .6em;
+  $padding-v: .2em;
+  display: inline-flex;
+  // FIXME: Same as Bootstrap's <p> --> Use proper vertical rhythm
+  margin-bottom: 11px;
+
+  div {
+    padding: $padding-v $padding-h;
+  }
+
+  .left {
+    color: $text-light;
+    background: #5cc0a8;
+    border-top-left-radius: 999em;
+    border-bottom-left-radius: 999em;
+  }
+
+  .right {
+    @include sans-serif-bold;
+    color: lighten($money-green, 30);
+    background: #545454;
+    border-top-right-radius: 999em;
+    border-bottom-right-radius: 999em;
+  }
+}
+
+.bonus {
+  @include sans-serif-bold;
+  color: $money-green;
+}
+
+.score {
+  @include sans-serif-bold;
+  color: $primary-red;
+}
+
+.month {
+  margin-bottom: 1em;
+  font-family: $font-family-serif;
+  font-size: 2em;
+
+  .arrow {
+    font-family: $font-family-sans-serif;
+    vertical-align: text-bottom;
+
+    &.disabled {
+      opacity: .2;
+    }
+
+    a {
+      color: $text-dark;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+      text-decoration: none;
+    }
+
+    &:first-child {
+      padding-right: .4em;
+    }
+
+    &:last-child {
+      padding-left: .4em;
+    }
+  }
+}
+
+.authorInfo {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+
+  p {
+    margin: 2em 0;
+  }
+}
+
+.authorName {
+  font-family: $font-family-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+.affiliation {
+  margin-top: -.4em;
+  font-style: italic;
+  text-align: center;
+}
+
+.recentSupporters {
+  h2 {
+    margin-top: 2em;
+  }
+
+  .feed {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 1em;
+    text-align: left;
+  }
+}
+
+.topArticles {
+  max-width: 500px;
+  margin: 2em auto;
+  text-align: left;
+}
+
+.tinyArticle {
+  display: flex;
+  margin-bottom: 1em;
+  align-items: center;
+
+  > :first-child {
+    margin-right: 1em;
+  }
+
+  header {
+    flex: 1;
+    text-align: left;
+  }
+
+  .title {
+    font-family: $font-family-serif;
+    font-size: 1.2em;
+  }
+
+  date {
+    display: block;
+    margin-top: -.4em;
+    font-size: .9em;
+    color: $medium-gray;
+  }
+}

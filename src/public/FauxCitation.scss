@@ -1,0 +1,21 @@
+@import '~theme/typography';
+
+.FauxCitation {
+  tr {
+    vertical-align: top !important;
+  }
+
+  td {
+    padding-bottom: 0.4em;
+  }
+
+  td:first-child {
+    @include sans-serif-bold;
+    padding-right: 1em;
+    white-space: nowrap;
+  }
+}
+
+.icon {
+  cursor: pointer;
+}

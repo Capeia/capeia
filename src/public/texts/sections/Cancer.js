@@ -1,0 +1,29 @@
+// @flow
+import React from 'react'
+
+export default () =>
+  <div>
+    <p>
+      <strong>
+        Scanning electron micrograph of a dying HeLa cell, a prominent cancer cell line.
+      </strong>
+    </p>
+    <p>
+      Cancer is a reminder of our unicellular origin.
+      Once life had arisen on Earth about 3.8 billion years ago the primordial life forms competed for sparse resources and, in the <em>“struggle for existence”</em>, only those that were able to outcompete others prevailed, ultimately through sheer weight of numbers.
+      A simple and brutal scenario, as it would seem, and it apparently took more than 2 billion years before something extraordinary happened and instead of competing some cells started to cooperate with each other, eventually forming the first multicellular organisms.
+      The hallmark of multicellularity is cellular altruism which means that most of an organism’s cells do not propagate themselves but rather support germ cells, which alone have a chance to give rise to the next generation.
+      In order to achieve this reproductive self-restriction, after billions of years of selection for maximal cell replication, a highly sophisticated system of checks and balances had to evolve that would keep the individual cells of our bodies under Darwinian control.
+      Alas, one hundred percent reliability does not exist, and mutations that occur in our cells can compromise this safeguard system.
+      With time, one checkpoint after the other may break down allowing affected cells to abandon self-restriction and selfishly propagate at the expense of the whole organism.
+      Cancer may thus be viewed as a relapse to our unicellular past.
+      Exploring the molecular details of how cancer cells evolve in our body and conceiving countermeasures is a truly Herculean task.
+      Effective cures (with an average 5-year survival rate of 90% or more) have to date only been found for a small number of non-final stage cancers, including Hodgkin’s lymphoma, testicular cancer, and thyroid cancer.
+      Clearly, our research efforts have to continue.
+    </p>
+    <p>
+      <em>
+        (Image credit: NIH, Wikimedia Commons)
+      </em>
+    </p>
+  </div>

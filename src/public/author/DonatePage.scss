@@ -1,0 +1,56 @@
+@import '~theme/variables';
+
+.authorBox {
+  text-align: center;
+
+  .support {
+    margin-top: 1em;
+    margin-bottom: -1em;
+    font-size: .8em;
+    color: #666;
+    text-transform: uppercase;
+  }
+}
+
+.donateSection {
+  padding: 2em;
+  text-align: center;
+  background: #f9f9f9;
+  border-top: solid 1px #eee;
+}
+
+.noStripeError {
+  color: $primary-red;
+  text-align: center;
+}
+
+.rewardNotice {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.rewardsHeader {
+  margin-bottom: 1em;
+}
+
+.rewardsFooter {
+  margin-top: 1em;
+  font-size: .8em;
+  color: #666;
+}
+
+.rewardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > div {
+    margin: 0 1em;
+  }
+}
+
+.notice {
+  margin-top: 2em;
+  font-size: .8em;
+  text-align: center;
+}

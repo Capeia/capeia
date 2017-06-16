@@ -1,0 +1,23 @@
+.LaurelWreath {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.wreath {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('aotm_laurel_wreath.svg') no-repeat center center;
+}
+
+.anonymous {
+  display: inline-block;
+  // FIXME: This shouldn't be necessary
+  margin-top: 2px;
+  background: url('anonymous.svg') no-repeat center center;
+  background-size: contain;
+  border-radius: 50%;
+}

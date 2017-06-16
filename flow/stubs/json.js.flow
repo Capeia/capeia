@@ -1,0 +1,8 @@
+/**
+ * Stub for webpack loaders that return a JSON-like object.
+ * E.g. json-loader, css-loader.
+ * @flow
+ */
+type JSON = { [key: string]: string }
+const empty: JSON = {}
+export default empty

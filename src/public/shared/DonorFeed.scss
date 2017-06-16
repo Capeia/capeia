@@ -1,0 +1,57 @@
+@import '~theme/variables';
+@import '~theme/typography';
+
+.donation {
+  + .donation {
+    margin-top: 1em;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.donor {
+  @include sans-serif-bold;
+  display: inline-block;
+}
+
+.amount {
+  @include sans-serif-bold;
+  display: inline-block;
+  color: $money-green;
+}
+
+.date {
+  font-size: .8em;
+  color: lighten($medium-gray, 10);
+}
+
+.noteLocationWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note {
+  // Always keep a little distance to location
+  margin-right: 1em;
+  font-family: $font-family-serif;
+  font-style: italic;
+  color: $medium-gray;
+}
+
+.location {
+  margin-top: -3px;
+
+  img {
+    width: 16px;
+  }
+
+  span {
+    padding-right: .6em;
+    font-size: .8em;
+    color: $medium-gray;
+  }
+}

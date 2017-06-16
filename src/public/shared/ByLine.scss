@@ -1,0 +1,35 @@
+@import '~theme/variables';
+
+.guestAuthor {
+  color: $brand-success;
+  user-select: none;
+
+  &:hover {
+    color: darken($brand-success, 10);
+  }
+}
+
+.editorAuthor {
+  color: $primary-red;
+  cursor: default;
+  user-select: none;
+}
+
+.byLine {
+  color: $medium-gray;
+  margin: 0;
+
+  time {
+    white-space: nowrap;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
+}
+
+.icon {
+  margin: 0 .2em;
+  width: 1.2em;
+}

@@ -1,0 +1,24 @@
+.InlineGroup {
+  display: flex;
+}
+
+$vertical-spacing: .5em;
+
+.groupItem {
+  flex: 1;
+  margin: 0 $vertical-spacing / 2;
+
+  &:first-child {
+    margin-right: $vertical-spacing;
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-left: $vertical-spacing;
+  }
+
+  &:only-child {
+    margin: 0;
+  }
+}

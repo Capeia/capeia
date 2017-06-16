@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IntroNavigation> renders correctly 1`] = `
+<div>
+  <h2
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    I
+     | 
+    <a
+      href="/welcome/2"
+    >
+      II
+    </a>
+     | 
+    <a
+      href="/welcome/3"
+    >
+      III
+    </a>
+  </h2>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-6"
+    />
+    <div
+      className="col-sm-6"
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+    >
+      <a
+        href="/welcome/2"
+      >
+        What Capeia is not ›
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<IntroNavigation> renders correctly 2`] = `
+<div>
+  <h2
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <a
+      href="/welcome"
+    >
+      I
+    </a>
+     | 
+    II
+     | 
+    <a
+      href="/welcome/3"
+    >
+      III
+    </a>
+  </h2>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <a
+        href="/welcome"
+      >
+        ‹ Welcome to Capeia
+      </a>
+    </div>
+    <div
+      className="col-sm-6"
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+    >
+      <a
+        href="/welcome/3"
+      >
+        Our Motivation ›
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<IntroNavigation> renders correctly 3`] = `
+<div>
+  <h2
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <a
+      href="/welcome"
+    >
+      I
+    </a>
+     | 
+    <a
+      href="/welcome/2"
+    >
+      II
+    </a>
+     | 
+    III
+  </h2>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <a
+        href="/welcome/2"
+      >
+        ‹ What Capeia is not
+      </a>
+    </div>
+    <div
+      className="col-sm-6"
+      style={
+        Object {
+          "textAlign": "right",
+        }
+      }
+    />
+  </div>
+</div>
+`;

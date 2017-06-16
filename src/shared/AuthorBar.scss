@@ -1,0 +1,78 @@
+@import '~theme/variables';
+
+// Workaround until we get position: sticky.
+// This initial height estimate is updated on componentDidMount.
+.push {
+  height: 50px;
+}
+
+.AuthorBar {
+  // bootstrap overrides
+  background: $dark;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  color: $light-gray;
+  font-size: .9em;
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    > * {
+      margin: 0 1em;
+    }
+  }
+
+  a {
+    color: $light-gray;
+    transition: color 100ms ease-in-out;
+
+    &.active {
+      color: $dashboard-bright;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $text-light;
+      text-decoration: none;
+
+      &.active {
+        color: $dashboard-bright;
+      }
+    }
+  }
+}
+
+.mainNav {
+  flex: 1;
+}
+
+// disable any effects for NYI features
+.comingSoon {
+  color: darken($light-gray, 30);
+  cursor: default;
+}
+
+.logo {
+  background: {
+    image: url('capeia_logo_1c_white.svg');
+    position: center;
+    repeat: no-repeat;
+    size: contain;
+  }
+  width: 6.5em;
+  height: 3.5em;
+  margin: 0 1em;
+}
+
+.avatarContainer {
+  display: inline-block;
+  // make some space
+  margin-top: -10px;
+  margin-bottom: -10px;
+  vertical-align: middle;
+}

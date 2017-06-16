@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MobileNav> renders correctly 1`] = `
+<nav
+  className="MobileNav"
+  role="navigation"
+>
+  <h1>
+    Ressort
+  </h1>
+  <ul>
+    <li>
+      <a
+        activeClassName="active"
+        href="/stem-cells"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="sections/stem_cells.svg"
+        />
+        Stem Cells
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/brain-and-nerves"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="sections/brain_nerves.svg"
+        />
+        Brain & Nerves
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/cancer"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="sections/cancer.svg"
+        />
+        Cancer
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/zoology"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="sections/zoology.svg"
+        />
+        Zoology
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/paleobiology"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="sections/paleontology.svg"
+        />
+        Paleobiology
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/planetary-science"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="sections/planetary_science.svg"
+        />
+        Planetary Science
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

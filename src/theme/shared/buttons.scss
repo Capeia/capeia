@@ -1,0 +1,79 @@
+@import '~theme/variables';
+@import '~theme/typography';
+
+@mixin btn-style($color) {
+  color: $color;
+  border-color: $color;
+
+  &.highlight {
+    color: $text-light;
+    background: $color;
+    border-color: $color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $text-light;
+    background: darken($color, 3);
+    border-color: darken($color, 3);
+  }
+
+  &[disabled] {
+    color: $medium-gray;
+    border-color: $medium-gray;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $medium-gray;
+      background: transparent;
+      border-color: $medium-gray;
+    }
+  }
+}
+
+%btn {
+  @include sans-serif-normal;
+  // padding: .4em 1em; // breaks some stuff (e.g. editor block toolbar)
+  background: transparent;
+  border-width: 2px;
+  border-radius: 999em;
+  transition: color, border-color, background 100ms ease-in-out;
+
+  // scss-lint:disable DeclarationOrder
+  @include btn-style(lighten($text-dark, 20));
+
+  // scss-lint:disable SelectorFormat
+  &.btn-primary {
+    @include btn-style($brand-primary);
+  }
+
+  &.btn-success {
+    @include btn-style($brand-success);
+  }
+
+  &.btn-warning {
+    @include btn-style($brand-warning);
+  }
+
+  &.btn-danger {
+    @include btn-style($brand-danger);
+  }
+
+  &.btn-info {
+    @include btn-style($brand-info);
+  }
+
+  &.btn-capeia {
+    @include btn-style($primary-red);
+  }
+
+  &.btn-donate {
+    @include btn-style($money-green);
+  }
+
+  &.btn-lg {
+    font-size: 1em;
+  }
+}

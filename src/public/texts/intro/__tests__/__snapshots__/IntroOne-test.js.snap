@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IntroOne> renders correctly 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="IntroContainer row"
+  >
+    <div
+      className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"
+    >
+      <div
+        className=""
+      >
+        <h1
+          className="tagline"
+        >
+          Capeia is a New Way to Interact with Science.
+        </h1>
+        <div
+          className="introRow row"
+        >
+          <div
+            className="col-md-5"
+          >
+            <div
+              className="introImage discover"
+            />
+          </div>
+          <div
+            className="col-md-7"
+          >
+            <h2
+              className="IntroHeading"
+            >
+              Discover
+            </h2>
+            <p>
+              Capeia is a novel online media portal that aims to foster fruitful exchanges between scientists and the interested public. On Capeia scientists report and interpret recent developments in their particular fields and raise awareness for relevant topics.
+            </p>
+          </div>
+        </div>
+        <div
+          className="introRow row"
+        >
+          <div
+            className="col-md-5 col-md-push-7"
+          >
+            <div
+              className="introImage getInTouch"
+            />
+          </div>
+          <div
+            className="col-md-7 col-md-pull-5"
+          >
+            <h2
+              className="IntroHeading"
+            >
+              Get in Touch
+            </h2>
+            <p>
+              On Capeia scientists are happy to enter into discussion with you. Feel free to join our lively forum debates, whether you have questions or simply want to give feedback!
+            </p>
+          </div>
+        </div>
+        <div
+          className="introRow row"
+        >
+          <div
+            className="col-md-5"
+          >
+            <div
+              className="introImage support"
+            />
+          </div>
+          <div
+            className="col-md-7"
+          >
+            <h2
+              className="IntroHeading"
+            >
+              Support
+            </h2>
+            <p>
+              On Capeia scientists are provided with a forum in which to present their own work. If you think more should be done in a particular field of research you can directly support individual scientists. Alternatively, you can fuel our 
+              <strong>
+                <a
+                  href="/author-of-the-month"
+                >
+                  “Author of the Month”
+                </a>
+              </strong>
+               competition by increasing the prize money.
+            </p>
+          </div>
+        </div>
+        <div
+          className="introRow row"
+        >
+          <div
+            className="col-md-8 col-md-offset-2"
+          >
+            <p
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              <em>
+                In summary, Capeia is a vibrant site, full of intellectual energy that will provide inspiration to both scientists and the public alike.
+              </em>
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2
+            style={
+              Object {
+                "textAlign": "center",
+              }
+            }
+          >
+            I
+             | 
+            <a
+              href="/welcome/2"
+            >
+              II
+            </a>
+             | 
+            <a
+              href="/welcome/3"
+            >
+              III
+            </a>
+          </h2>
+          <div
+            className="row"
+          >
+            <div
+              className="col-sm-6"
+            />
+            <div
+              className="col-sm-6"
+              style={
+                Object {
+                  "textAlign": "right",
+                }
+              }
+            >
+              <a
+                href="/welcome/2"
+              >
+                What Capeia is not ›
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

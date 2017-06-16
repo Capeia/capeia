@@ -1,0 +1,14 @@
+@import '~theme/typography';
+
+.ArticleSharer {
+  display: flex;
+  max-width: 190px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.shareCount {
+  font-size: .8em;
+  text-align: center;
+  @include sans-serif-bold;
+}

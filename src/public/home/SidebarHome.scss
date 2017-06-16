@@ -1,0 +1,49 @@
+@import '~theme/variables';
+
+.intro {
+  display: none;
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+  }
+}
+
+.sellingPoints {
+  list-style: none;
+  margin: 2em 0;
+  padding: 0;
+
+  li {
+    align-items: center;
+    display: flex;
+    margin: 1em 0;
+    padding-left: .5em;
+
+    &::before {
+      background: no-repeat center left transparent;
+      background-size: contain;
+      content: '';
+      display: inline-block;
+      height: 2.5em;
+      margin-right: 1em;
+      vertical-align: middle;
+      width: 2.5em;
+    }
+
+    span {
+      flex: 1;
+    }
+  }
+
+  .discover::before {
+    background-image: url('telescope_96.svg');
+  }
+
+  .learn::before {
+    background-image: url('hand_96.svg');
+  }
+
+  .support::before {
+    background-image: url('bag_96.svg');
+  }
+}

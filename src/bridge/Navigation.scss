@@ -1,0 +1,16 @@
+.Navigation {
+  padding: 2em;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .navList {
+    padding: 0;
+    list-style: none;
+  }
+
+  .active {
+    font-weight: bold;
+  }
+}

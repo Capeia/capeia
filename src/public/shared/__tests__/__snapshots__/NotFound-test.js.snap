@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFound> renders correctly 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    404!
+  </h1>
+  <p>
+    Unfortunately, this URL doesn't point anywhere.
+  </p>
+</div>
+`;

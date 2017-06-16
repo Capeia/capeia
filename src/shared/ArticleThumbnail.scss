@@ -1,0 +1,21 @@
+@import '~theme/shared/rich-text';
+
+.score {
+  background: $primary-red;
+  border-radius: 50%;
+  bottom: -5px;
+  color: $text-light;
+  display: table;
+  font-size: .7em;
+  font-weight: 700;
+  height: 40px;
+  position: absolute;
+  right: 5px;
+  width: 40px;
+
+  span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}

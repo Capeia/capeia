@@ -1,0 +1,39 @@
+@import '~theme/variables';
+
+.articleHeader {
+  display: flex;
+  align-items: center;
+  // prevent long titles from squishing the thumbnail
+  .heading {
+    flex: 1;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .heading {
+      flex: auto;
+      margin-left: 0;
+    }
+  }
+}
+
+.thumbnail {
+  @media print {
+    // TODO: Get this to show properly in print
+    display: none;
+  }
+}
+
+.heading {
+  margin-left: 1em;
+
+  h1, :global(.h1) {
+    margin: 0;
+  }
+
+  address {
+    font-size: 1.2em;
+  }
+}

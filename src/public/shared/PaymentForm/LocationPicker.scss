@@ -1,0 +1,59 @@
+@import '~theme/shared/input';
+
+.LocationPicker {
+  // For suggests
+  position: relative;
+}
+
+.input {
+  @extend %input;
+
+  &:placeholder-shown {
+    background: url('vendor/powered_by_google_on_white.png') no-repeat 95%;
+  }
+}
+
+.suggests {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 25em;
+  padding: 0;
+  margin-top: -1px;
+  background: #fff;
+  border: 1px solid $border-color-focus;
+  border-top-width: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  list-style: none;
+  z-index: 5;
+  transition: max-height 0.2s, border 0.2s;
+}
+
+.suggestsHidden {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border-width: 0;
+}
+
+.suggestItem {
+  padding: .5em .65em;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: #f5f5f5;
+  }
+}
+
+.suggestItemActive {
+  background: #267dc0;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background: #ccc;
+  }
+}

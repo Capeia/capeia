@@ -1,0 +1,7 @@
+/**
+ * Stub for webpack loaders that return a string.
+ * E.g. file-loader, url-loader.
+ * @flow
+ */
+const empty: string = ''
+export default empty

@@ -1,0 +1,20 @@
+@import '~theme/variables';
+
+.SignInForm {
+  h1 {
+    font-size: 1.4em;
+    font-feature-settings: 'smcp';
+  }
+
+  .error {
+    color: #ff0000;
+  }
+}
+
+.logo {
+  width: 12em;
+  height: 4em;
+  margin: 0 auto;
+  background: url('../../static/capeia_logo_4c_dark.svg') center center no-repeat transparent;
+  background-size: contain;
+}

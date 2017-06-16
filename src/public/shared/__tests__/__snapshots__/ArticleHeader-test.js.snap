@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArticleHeader> renders correctly 1`] = `
+<header
+  className="articleHeader"
+>
+  <div
+    className="thumbnail"
+  >
+    <span>
+      Foo
+    </span>
+  </div>
+  <div
+    className="heading"
+  >
+    Bar
+  </div>
+</header>
+`;

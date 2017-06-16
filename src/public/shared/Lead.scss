@@ -1,0 +1,41 @@
+@import '~theme/variables';
+
+.Lead {
+  img {
+    max-width: 100%;
+  }
+}
+
+.titleContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+$slogan-shadow: rgba(0, 0, 0, .2);
+
+.title {
+  position: relative;
+  display: none;
+  font-family: $font-family-serif;
+  font-size: 6rem;
+  color: $text-light;
+  text-align: center;
+  text-shadow: 2px 2px 0 $slogan-shadow;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+  }
+
+  .above {
+    font-size: .6em;
+  }
+}

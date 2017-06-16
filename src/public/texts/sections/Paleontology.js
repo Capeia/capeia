@@ -1,0 +1,27 @@
+// @flow
+import React from 'react'
+
+export default () =>
+  <div>
+    <p>
+      <strong>
+        A mammoth tusk lying in a river bed on Wrangel Island, off the Siberian coast.
+      </strong>
+    </p>
+    <p>
+      We tend to think of woolly mammoths <em>(Mammuthus primigenius)</em> as Ice Age creatures that died out approximately 10,000 years ago (i.e. 8,000 years BCE).
+      In 1993, however, scientists discovered a relic population of mammoths survived significantly longer on Wrangel Island, where radiocarbon dating of subfossil material indicated an age as recent as 4,000 BP (i.e. 2,000 BCE).
+      Woolly mammoths, therefore, should no longer be regarded as prehistoric animals.
+      After all, the Great Pyramid of Giza was already more than 500 years old when the last mammoths endured on a remote island in the Arctic Ocean, unnoticed by humanity.
+      Or were they? In an interesting commentary in <a href='http://www.nature.com/nature/journal/v369/n6479/pdf/369364b0.pdf' target='_blank'><em>Nature</em></a> in 1994, Baruch Rosen drew attention to an Egyptian tomb painting from approximately 1,400 BCE that seems to depict a “pygmy mammoth”.
+      If this interpretation is correct it has radical implications of the sort featured in Roland Emmerich’s movie “10,000 B.C.” (in this case, though, Roland got the date in the title of his movie wrong).
+      Putting aside a possible link between ancient Egypt and mammoths, however, this debate illustrates a central problem in paleontology: the difficulty in specifying extinction dates because the preservation (and detection) of fossil or subfossil remains is a very rare event.
+      It is thus highly unlikely that remains of the very last individuals of a species are ever uncovered.
+      A paleontologist’s imperative is therefore to “keep on digging”!
+    </p>
+    <p>
+      <em>
+        (Image credit: Hemis, Alamy)
+      </em>
+    </p>
+  </div>

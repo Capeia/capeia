@@ -1,0 +1,52 @@
+@import "~theme/variables";
+@import '~theme/typography';
+
+$padding-x: 2em;
+$padding-y: 4em;
+
+.contentContainer {
+  padding: $padding-x;
+
+  @media (min-width: $screen-md-min) {
+    padding: $padding-y $padding-x;
+  }
+
+  &.notCentered {
+    // FIXME: HACK: We actually want this to be centered on lg
+    @media (min-width: $screen-lg-min) {
+      margin-left: 10%;
+    }
+  }
+}
+
+.sidebarContainer {
+  padding: $padding-y $padding-x;
+}
+
+.sidebar {
+  section {
+    border-left: solid 1px #ececec;
+    margin-left: -$padding-x;
+    padding-left: $padding-x;
+
+    // TODO: adjust for screen size
+    margin-bottom: 4em;
+
+    // TODO: don'y use same size, this is only due to inconsistent markup
+    h1, h2 {
+      @include sans-serif-normal;
+      font-size: 1.4em;
+    }
+
+    &:first-child {
+      // TODO: Get rid of default margins altogether
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  p {
+    color: gray;
+  }
+}

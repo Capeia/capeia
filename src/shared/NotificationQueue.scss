@@ -1,0 +1,24 @@
+.notification {
+  border-left: solid 3px;
+  padding: 0.5em;
+  margin: 0.3em 0;
+  font-size: 0.9em;
+
+  &.info {
+    $blue: #12a2ff;
+    border-color: $blue;
+    background-color: lighten($blue, 43)
+  }
+
+  &.success {
+    $green : #5cb85c;
+    border-color: $green;
+    background-color: lighten($green, 43)
+  }
+
+  &.error {
+    $red: #d42424;
+    border-color: $red;
+    background-color: lighten($red, 43)
+  }
+}

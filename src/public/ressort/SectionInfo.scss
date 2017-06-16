@@ -1,0 +1,59 @@
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-in-delayed {
+  0%   { opacity: 0; }
+  30%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes move-up {
+  0%   { transform: translateY(.5em); }
+  100% { transform: translateY(0); }
+}
+
+@mixin animation-fade-in {
+  animation: {
+    name: fade-in;
+    duration: 100ms;
+    timing-function: ease-out;
+    fill-mode: forwards;
+  }
+}
+
+.wrapper {
+  @include animation-fade-in;
+  position: relative;
+  z-index: 99;
+}
+
+.HeroInfo {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+}
+
+.text {
+  animation: {
+    name: move-up;
+    duration: 600ms;
+    timing-function: ease;
+    fill-mode: forwards;
+  }
+}
+
+.overlay {
+  @include animation-fade-in;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 98;
+  background: rgba(255, 255, 255, 0.98);
+  // delay opacity a bit to prevent white flash on image
+  animation-name: fade-in-delayed;
+  animation-duration: 400ms;
+}

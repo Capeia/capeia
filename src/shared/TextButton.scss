@@ -1,0 +1,8 @@
+.TextButton {
+  color: #5cb85c;
+
+  &.disabled {
+    color: gray;
+    cursor: default;
+  }
+}

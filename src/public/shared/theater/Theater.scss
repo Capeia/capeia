@@ -1,0 +1,19 @@
+@import '~theme/variables';
+
+.Theater {
+  position: relative;
+  width: 100%;
+  // Percentage padding is based on container WIDTH - we use this to force
+  // a fixed aspect ratio for the content.
+  padding-bottom: (505 / 1920) * 100%;
+  background-color: $dark;
+
+  .content {
+    // Cover entire parent container (includes aspect ratio padding!)
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

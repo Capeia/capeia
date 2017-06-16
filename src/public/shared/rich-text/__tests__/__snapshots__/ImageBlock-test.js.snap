@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageBlock> renders correctly 1`] = `
+<div
+  className="articleMediaBlock"
+>
+  <div
+    className="container"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <img
+      src="http://example.com/meme.jpg"
+    />
+  </div>
+  <div
+    className="description"
+  >
+    <span
+      style={Object {}}
+    >
+      foo bar baz
+    </span>
+  </div>
+</div>
+`;

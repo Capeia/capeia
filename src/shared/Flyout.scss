@@ -1,0 +1,27 @@
+@import "~theme/variables.scss";
+@import '~theme/typography';
+
+.Flyout {
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  background: #FFF;
+  padding: 2em 3em;
+  color: #333;
+  overflow-y: auto;
+  box-shadow: -3px 0 50px rgba(0,0,0,0.05);
+
+  h1, h2 {
+    @include sans-serif-normal;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+    margin: 1em 0 0;
+  }
+}

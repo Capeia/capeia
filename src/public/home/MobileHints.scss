@@ -1,0 +1,33 @@
+@import '~theme/variables';
+@import '~theme/typography';
+
+.MobileHints {
+  margin-bottom: 2em;
+
+  @media (min-width: $screen-md-min) {
+    display: none;
+  }
+}
+
+.hint {
+  display: flex;
+  padding: .2em .4em;
+  margin-bottom: 1em;
+  background: #f9f9f9;
+  border-bottom: solid 3px;
+  align-items: center;
+  justify-content: space-between;
+
+  &.capeia {
+    border-color: $primary-red;
+  }
+
+  &.aotm {
+    border-color: rgb(92, 192, 168);
+  }
+
+  .arrow {
+    @include sans-serif-bold;
+    white-space: nowrap;
+  }
+}

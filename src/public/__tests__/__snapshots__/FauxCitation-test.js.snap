@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FauxCitation> renders correctly 1`] = `
+<span
+  className="ImageDecorator icon"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundImage": "url(article/glyphicon-education.png)",
+    }
+  }
+>
+  　
+</span>
+`;

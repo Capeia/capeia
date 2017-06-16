@@ -1,0 +1,36 @@
+@import '~theme/variables';
+
+.AuthorInfo {
+  max-width: 300px;
+  text-align: center;
+
+  @media print {
+    text-align: left;
+  }
+}
+
+.name {
+  margin: 1em;
+
+  @media print {
+    margin: 0;
+  }
+
+  a {
+    font-size: 2rem;
+    color: $text-dark;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.socialLinks {
+  text-align: center;
+
+  span:not(:last-child)::after {
+    content: ' · ';
+  }
+}

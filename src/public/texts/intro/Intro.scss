@@ -1,0 +1,61 @@
+@import '~theme/variables';
+@import '~theme/typography';
+@import '~theme/shared/rich-text';
+
+.tagline {
+  text-align: center;
+}
+
+.IntroHeading {
+  @include sans-serif-normal;
+  font-size: 0.8em;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.introRow {
+  margin-bottom: 2em;
+
+  &:nth-of-type(1) {
+    margin-top: 2em;
+  }
+
+  @media (min-width: $screen-md-min) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 4em;
+  }
+}
+
+.introImage {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+
+  &.discover {
+    background-image: url('intro/telescope.jpg');
+  }
+
+  &.getInTouch {
+    background-image: url('intro/hands.jpg');
+  }
+
+  &.support {
+    background-image: url('intro/bag.jpg');
+  }
+}
+
+// TODO: Use image block component somehow?
+.imageDescription {
+  @include image-description;
+}
+
+.iconSeparator {
+  text-align: center;
+
+  img {
+    width: 60px;
+  }
+}

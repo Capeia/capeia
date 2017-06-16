@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationQueue> renders correctly 1`] = `<div />`;
+
+exports[`<NotificationQueue> renders correctly 2`] = `
+<div>
+  <div
+    className="notification info"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`<NotificationQueue> renders correctly 3`] = `
+<div>
+  <div
+    className="notification error"
+  >
+    <span>
+      foo
+    </span>
+  </div>
+  <div
+    className="notification info"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`<NotificationQueue> renders correctly 4`] = `
+<div>
+  <div
+    className="notification info"
+  >
+    <div>
+      baz
+    </div>
+  </div>
+  <div
+    className="notification error"
+  >
+    <span>
+      foo
+    </span>
+  </div>
+  <div
+    className="notification info"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`<NotificationQueue> renders correctly 5`] = `
+<div>
+  <div
+    className="notification success"
+  >
+    bar
+  </div>
+  <div
+    className="notification info"
+  >
+    <div>
+      baz
+    </div>
+  </div>
+  <div
+    className="notification error"
+  >
+    <span>
+      foo
+    </span>
+  </div>
+</div>
+`;

@@ -1,0 +1,25 @@
+@import '~theme/variables';
+
+.Toast {
+  margin: .2em 0;
+  overflow: hidden;
+  color: $toast-text;
+  cursor: pointer;
+  background: $toast-default;
+  border-radius: 3px;
+  transition: background 300ms ease-in-out;
+
+  // We wrap contents inside another div to allow for max-height animation
+  // via react-motion (padding doesn't play nice with overflow: hidden).
+  > div {
+    padding: 1em;
+  }
+
+  &.error {
+    background: $toast-error;
+  }
+
+  &.success {
+    background: $toast-success;
+  }
+}

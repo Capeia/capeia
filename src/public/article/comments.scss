@@ -1,0 +1,89 @@
+@import '~theme/variables';
+
+.ArticleComments {
+  h1 {
+    margin-bottom: 0.4em;
+  }
+}
+
+@media print {
+  // TODO: At some point, we may want to do this. Needs special formatting though!
+  .ArticleComments {
+    display: none;
+  }
+}
+
+.Comment {
+  padding: 1em;
+  border: solid 1px darken($light-gray, 2);
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba($light-gray, 0.4);
+  margin-bottom: 1em;
+  background-color: white;
+
+  time {
+    color: $medium-gray;
+    font-size: 0.9em;
+    display: block;
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+
+  .right {
+    margin-left: 1em;
+  }
+}
+
+@mixin open-top {
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+@mixin open-bottom {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+// TODO: Jeez, that is pretty complex. Simplify?
+.hasSubtree,
+.responding {
+  > .Comment:not(.responseForm) {
+    @include open-bottom;
+  }
+
+  .responseForm {
+    @include open-top;
+  }
+}
+
+.subtree {
+  .Comment {
+    @include open-top;
+  }
+
+  // Don't open last comment...
+  > :not(:last-child) .Comment {
+    @include open-bottom;
+  }
+
+  // ...unless we are responding to this subtree
+  &.responding .Comment {
+    @include open-bottom;
+  }
+}
+
+.commentActions {
+  text-align: right;
+
+  span { // TextButton - this is pretty fragile!
+    display: inline-block;
+    margin-right: 1em;
+    color: #ce1616;
+    vertical-align: middle;
+  }
+}

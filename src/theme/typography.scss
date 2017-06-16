@@ -1,0 +1,42 @@
+// Typgraphical definitions for serif and sans-serif types.
+//
+// TODO: This is currently not used anywhere. Either use it, or get rid of it.
+// @import '~modularscale-sass/stylesheets/modular-scale';
+@import '~theme/variables';
+
+// $ms-base: 1.625em; // 26px at 16px base
+// $ms-ratio: $golden;
+
+// The sans-serif-normal/bold mixins are workarounds (hacks) that allow us to
+// use the Ministry font's light (300) and medium (400) as normal / bold weights
+// respectively.
+//
+// This is only necessary as Typekit unfortunately doesn't support redefining
+// font weights in their Kit Editor.
+//
+// We use the .wf-active class to ensure that the 300/400 weights aren't used
+// for fallback fonts.
+//
+// This works reasonably well in most cases, with one exception: Inline styles.
+// Some components (i.e. the CapeiaEditor) produce inline styles with
+// "font-weight: bold", which we cannot affect this way. In practice this mostly
+// means that bold text in image descriptions in articles is rendered using
+// faux-bold.
+
+@mixin sans-serif-normal {
+  font-family: $font-family-sans-serif;
+  font-weight: normal;
+
+  @at-root html:global(.wf-active) #{&} {
+    font-weight: 300;
+  }
+}
+
+@mixin sans-serif-bold {
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+
+  @at-root html:global(.wf-active) #{&} {
+    font-weight: 400;
+  }
+}

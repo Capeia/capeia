@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav> renders correctly 1`] = `
+<nav
+  className="main-nav"
+  role="navigation"
+>
+  <ul>
+    <li>
+      <a
+        activeClassName="active"
+        href="/stem-cells"
+      >
+        <img
+          alt=""
+          src="sections/stem_cells.svg"
+        />
+        Stem Cells
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/brain-and-nerves"
+      >
+        <img
+          alt=""
+          src="sections/brain_nerves.svg"
+        />
+        Brain & Nerves
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/cancer"
+      >
+        <img
+          alt=""
+          src="sections/cancer.svg"
+        />
+        Cancer
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/zoology"
+      >
+        <img
+          alt=""
+          src="sections/zoology.svg"
+        />
+        Zoology
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/paleobiology"
+      >
+        <img
+          alt=""
+          src="sections/paleontology.svg"
+        />
+        Paleobiology
+      </a>
+    </li>
+    <li>
+      <a
+        activeClassName="active"
+        href="/planetary-science"
+      >
+        <img
+          alt=""
+          src="sections/planetary_science.svg"
+        />
+        Planetary Science
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

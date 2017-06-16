@@ -1,0 +1,12 @@
+@import '../shared/rich-text-editor/Draft'; // TODO: duplicate import
+@import '~theme/variables';
+
+.titleInput {
+  :global {
+    .public-DraftEditorPlaceholder-root {
+      // FIXME: @extend doesn't work here, but don't simply copy the .h1 style here
+      font-size: 41px;
+      font-family: $font-family-serif;
+    }
+  }
+}

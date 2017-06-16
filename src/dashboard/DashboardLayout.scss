@@ -1,0 +1,17 @@
+@import "~theme/variables";
+@import '~theme/typography';
+
+.dashboardContent {
+  padding: 2em;
+  background: #f5f5f5;
+
+  :global {
+    h1, h2, h3, h4, h5, h6 {
+      @include sans-serif-normal;
+    }
+
+    h2 {
+      font-size: 1.6em;
+    }
+  }
+}

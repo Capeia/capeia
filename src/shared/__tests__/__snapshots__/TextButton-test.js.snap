@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextButton> renders correctly 1`] = `
+<span
+  className="TextButton "
+  onClick={[Function]}
+  role="button"
+  tabIndex={0}
+/>
+`;

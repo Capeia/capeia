@@ -1,0 +1,45 @@
+@import '~theme/variables';
+
+// TODO: There is opportunity to share some styles with Nav.scss here
+
+.MobileNav {
+  padding: .2em 1em;
+  font-size: .8em;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 2em;
+    font-variant: small-caps;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 1em 0;
+  }
+
+  a {
+    color: $nav-color;
+    font-family: $font-family-serif;
+    font-size: 1.2em;
+    opacity: .9; // to match Nav look
+    font-variant: small-caps;
+
+    &.active {
+      color: $primary-red;
+      text-decoration: none;
+    }
+  }
+
+  img {
+    margin-right: 8px;
+    vertical-align: bottom;
+    width: 1.5em;
+  }
+}

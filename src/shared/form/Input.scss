@@ -1,0 +1,40 @@
+@import '~theme/shared/input';
+
+$medium-light-gray: #b8b8b8;
+
+.wrapper {
+  @extend %input;
+  display: flex;
+  align-items: center;
+
+  &.focus {
+    @extend %input:focus;
+  }
+}
+
+.input {
+  // prevent overflowing parent, but still use up all available space
+  flex: auto;
+  width: 0;
+  padding: 0;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.prefix,
+.suffix {
+  padding: 0 $input-padding;
+  font-size: .8em;
+  color: $medium-light-gray;
+}
+
+.prefix {
+  margin-right: $input-padding;
+}
+
+.suffix {
+  margin-left: $input-padding;
+}

@@ -1,0 +1,59 @@
+@import '~theme/variables';
+@import '~theme/shared/rich-text';
+
+.media {
+  position: relative;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    cursor: pointer;
+    font-family: $font-family-sans-serif;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+    user-select: none;
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+.videoWrapper {
+  @include video-wrapper;
+}
+
+.videoPlayer {
+  @include video-player;
+}
+
+.placeholder {
+  font-family: $font-family-sans-serif;
+  background: #DDD;
+  color: #FFF;
+  padding: 2em;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  &.error {
+    background: $brand-danger;
+  }
+}
+
+.description {
+  @include image-description;
+}
